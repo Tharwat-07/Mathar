@@ -1,0 +1,649 @@
+/*-----------------------------------------------------------------------
+01. START APP FONTS
+-----------------------------------------------------------------------*/
+
+/* cairo-200 - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/cairo-v9-arabic-200.eot'); /* IE9 Compat Modes */
+  src: local('Cairo ExtraLight'), local('Cairo-ExtraLight'),
+       url('fonts/cairo-v9-arabic-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-200.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-200.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+/* cairo-300 - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/cairo-v9-arabic-300.eot'); /* IE9 Compat Modes */
+  src: local('Cairo Light'), local('Cairo-Light'),
+       url('fonts/cairo-v9-arabic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-300.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-300.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+/* cairo-regular - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/cairo-v9-arabic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Cairo Regular'), local('Cairo-Regular'),
+       url('fonts/cairo-v9-arabic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-regular.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+/* cairo-600 - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/cairo-v9-arabic-600.eot'); /* IE9 Compat Modes */
+  src: local('Cairo SemiBold'), local('Cairo-SemiBold'),
+       url('fonts/cairo-v9-arabic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-600.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-600.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+/* cairo-700 - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/cairo-v9-arabic-700.eot'); /* IE9 Compat Modes */
+  src: local('Cairo Bold'), local('Cairo-Bold'),
+       url('fonts/cairo-v9-arabic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-700.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-700.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+/* cairo-900 - arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/cairo-v9-arabic-900.eot'); /* IE9 Compat Modes */
+  src: local('Cairo Black'), local('Cairo-Black'),
+       url('fonts/cairo-v9-arabic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/cairo-v9-arabic-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/cairo-v9-arabic-900.woff') format('woff'), /* Modern Browsers */
+       url('fonts/cairo-v9-arabic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/cairo-v9-arabic-900.svg#Cairo') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon/icomoon.eot');
+	src:url('fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon/icomoon.woff') format('woff'),
+		url('fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*-----------------------------------------------------------------------
+01. END APP FONTS
+-----------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------
+  AHMED4CSS entered
+-----------------------------------------------------------------------*/
+/* table options stuff */
+div.settings {
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:5px;
+    margin:10px;
+}
+div.settings label       { text-align:left; }
+div.settings label:after { content: ":"; }
+
+
+input {
+  text-align: center
+}
+/*-----------------------------------------------------------------------
+  AHMED4CSS exits
+-----------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------
+  02. START GENERAL STYLES
+-----------------------------------------------------------------------*/
+
+/* scrollbar */
+
+::-webkit-scrollbar-thumb {
+    background-color: #0db379;  
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #fcfefd;
+  color: #183a56;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-top: 63px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+*:focus {
+    outline: none
+}
+
+button:focus{
+    outline: none
+}
+
+th {
+    font-weight: normal;
+}
+
+#section1 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#section2 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#section3 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#section4 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#section5 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.img {
+    max-width: 400px;
+    height: auto;
+}
+
+/*-----------------------------------------------------------------------
+02. END GENERAL STYLES
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+03. START PRELOADER
+-----------------------------------------------------------------------*/
+
+.se-pre-con {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+    background: url(preloader.png) center no-repeat #fff;
+}
+
+/*-----------------------------------------------------------------------
+03. END PRELOADER
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+04. START TABS
+-----------------------------------------------------------------------*/
+
+.nav {
+    background-color: #183a56;
+}
+
+.nav-item .nav-link {
+    padding: 20px;
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: #17cc8e;
+    border: none;
+    padding: 20px;
+}
+
+.tabs > section[aria-hidden="true"] {
+    display: none;
+}
+
+/*-----------------------------------------------------------------------
+04. END TABS
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+05. START FULL TABLE 
+-----------------------------------------------------------------------*/
+
+/* select&remove button style */
+.icon-plus:before,
+.icon-plus:after {
+	content: "\e011";
+}
+
+.icon-remove:before {
+	content: "\e00f";
+}
+
+.btn_1.icon-remove:before {
+    font-size: 15px;
+}
+
+.btn_1:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn_1:before,
+.icon-plus:after,
+.btn_2:before {
+    font-family: 'icomoon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn_1:hover {
+    color: #fff;
+}
+
+.btn_1 {
+	border: none;
+	cursor: pointer;
+	padding: 7.5px 15px;
+	display: inline-block;
+	font-weight: 700;
+    position: relative;
+    background: #17cc8e;
+	color: #fff;
+	font-size: 12px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn_1:active {
+	background: #17cc8e;
+	top: 2px;
+}
+
+.btn_1 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn_1:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 40px;
+	font-size: 100%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn_1:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn_1:before {
+	left: 0;
+	top: -100%;
+}
+
+.btn_1:hover:before {
+	top: 0;
+}
+
+/* table body style */
+table.dataTable {
+    color: #183a56;
+}
+table.dataTable tbody td {
+    vertical-align: middle;
+}
+
+/* Table white Spcee */
+.dataTables_wrapper {
+    margin: 30px 25px;
+}
+
+/* search box style */
+#full_table_filter {
+    margin-bottom: 20px;
+}
+
+
+
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 2px solid #dee2e6;
+    padding: 5px;
+    background-color: #fff;
+    margin-right: 5px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    border: 2px solid #0db379;
+    box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
+}
+
+/* show entries box style */
+#full_table_length  {
+    margin-bottom: 20px;
+}
+
+#full_table_length select {
+    margin: 0 7px;
+    border: 2px solid #dee2e6;
+    background-color: #fff;
+    padding: 7px;
+}
+
+/* Paginate style */
+#full_table_paginate,
+.dataTables_info {
+    margin-top: 30px;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color: #183a56;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+ .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff!important;
+    border: 1px solid #17cc8e;
+    background: #17cc8e;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin-left: 2px;
+    border-radius: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #fff !important;
+    border: 1px solid #17cc8e;
+    background: #17cc8e;
+}
+
+/*-----------------------------------------------------------------------
+05. END FULL TABLE
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+06. START EMPTY TABLE
+-----------------------------------------------------------------------*/
+
+#section2 .row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* For just Center ( Remove Button ) HADADAY */
+#section2 .r_b_s {
+    margin-top: 15px;
+}
+
+/*-----------------------------------------------------------------------
+06. END EMPTY TABLE
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+07. START ZOOMING IMG
+-----------------------------------------------------------------------*/
+
+.zoomer {
+    background: #f7f7f8;
+    border: 1px solid #dee2e6;
+    height: 461px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* The Zooming img tab Two Buttons */
+.btn_2 {
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 20px;
+	font-weight: 700;
+	position: relative;
+    background: #17cc8e;
+    color: #fff;
+    padding: 20px 40px 20px 100px;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn_2:hover {
+	background: #14c285;
+}
+
+.btn_2:active {
+	background: #0db379;
+	top: 1px;
+}
+
+.btn_2:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+    line-height: 3.1;
+    font-size: 120%;
+	width: 60px;
+}
+
+.btn_2:before {
+	background: rgba(0,0,0,0.05);
+}
+
+.icon-star-2:before {
+	content: "\e00c";
+}
+
+.icon-file:before {
+    content: "\e004";
+	font-family: 'icomoon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-cog:before {
+    content: "\e010";
+	font-family: 'icomoon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*-----------------------------------------------------------------------
+07. END ZOOMING IMG
+-----------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------
+08. START SETTING TAB
+-----------------------------------------------------------------------*/
+
+.setting_wrapper {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 800px;
+    height: auto;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.df_setting {
+    display: -webkit-box;
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.font_type {
+    display: -webkit-box;
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;
+}
+
+.a_1 select {
+    width: 250px;
+    height: 40px;
+    padding: 0;
+    padding-left: 5px;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    color: #183a56;
+    background-color: none;
+    border-color: #14c285;
+    box-shadow: none;
+}
+
+.a_2 {
+    margin-left: 193px;
+    padding-top: 10px;
+}
+
+.b_2{
+    margin-left: 186px;
+    padding-top: 10px;
+}
+
+.c_2 {
+    margin-left: 53px;
+    padding-top: 10px;
+}
+
+input {
+    color: #183a56;
+    border-color: #ced4da;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input:focus {
+    border-color: #14c285;
+}
+
+.font_type,
+.font_size,
+.papper_number,
+.cheack_1,
+.cheack_2,
+.color_peacker_1,
+.color_peacker_2,
+.color_peacker_3,
+.save-btn {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.cheack_1 input,
+.cheack_2 input {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+
+.line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #ddd;
+    height: 1px;
+    width: 100%;
+    z-index: -1;
+}
+
+/*-----------------------------------------------------------------------
+08. END SETTING TAB 
+-----------------------------------------------------------------------*/
