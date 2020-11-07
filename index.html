@@ -1,0 +1,216 @@
+<html lang="en">
+    <head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Mathar</title>
+
+        <!--==========================
+            START CSS FILES
+        ==========================-->
+
+        <!-- Bootstrap Lib -->
+        <link rel="stylesheet" href="./resources/bootstrap.min.css">
+        <!-- Data Table Lib -->
+        <link rel="stylesheet" href="./resources/datatables.min.css">
+        <!-- Row Record -->
+        <link rel="stylesheet" href="resources/rowReorder.dataTables.min.css">
+        <!-- Zooming Img Plugin -->
+        <link rel="stylesheet" href="./resources/jquery.fs.zoomer.css">
+        <!-- Our Css Main File -->
+        <link rel="stylesheet" href="./resources/style.css">
+
+        <!--==========================
+            END CSS FILES
+        ==========================-->
+
+    </head>
+    <body>
+        
+        <!--==========================
+            START PRELOADER
+        ==========================-->
+        <div class="se-pre-con"></div>
+        <!--==========================
+            END PRELOADER
+        ==========================-->
+
+        <!--==========================
+            START TABS
+        ==========================-->
+        <ul class="nav fixed-top justify-content-center" data-tabs>
+            <li class="nav-item"><a class="nav-link active" data-tabby-default href="#section1">جدول المسائل</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section2">جدول المختارات</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section3">معاينة النتيجة</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section4">الإعدادات</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section5">عن البرنامج</a></li>
+        </ul>
+        <!--==========================
+            END TABS
+        ==========================-->
+
+        <!--==========================
+            START TAB 1 CONTENT
+        ==========================-->
+        <section id="section1" class="tabbed tabbed_default">
+            <table id="full_table" class="display table table-bordered">
+
+            </table>
+        </section>
+        <!--==========================
+            END TAB 1 CONTENT
+        ==========================-->
+
+        <!--==========================
+            START TAB 2 CONTENT
+        ==========================-->
+        <section id="section2" class="tabbed">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button id="clear_table_2" class="btn_2 icon-remove">تفريغ</button>
+                    <button id="collect_data_t2" class="btn_2 icon-star-2">تكوين</button>
+                </div>
+            </div>
+            <table id="empty_table" class="display table table-bordered"> 
+                
+            </table>  
+        </section>
+        <!--==========================
+            END TAB 2 CONTENT
+        ==========================-->
+
+        <!--==========================
+            START TAB 3 CONTENT
+        ==========================-->
+        <section id="section3" class="tabbed">
+            <!-- image-->
+            <div class="zoomer" style="background-color: lightgrey;"> <!--= container: made to make a backgroud-color  =-->
+                <div id="wheelzoom.exe" style="display: block;"></div> <!--= the image container =-->
+            </div>
+            
+                <script src="./resources/openseadrag/openseadragon.min.js"></script>
+                <script type="text/javascript">
+                    var viewer = OpenSeadragon({
+                        id: "wheelzoom.exe",
+                        prefixUrl: "./resources/openseadrag/images/", <!--= icons path =--> 
+                        tileSources: {
+                                        type: 'image',
+                                        url:  'im.png' <!--= the image path =--> 
+                                    }
+                    });
+                </script>
+
+            <!-- Buttons -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn_2 icon-file">حفظ</button>
+                    <button class="btn_2 icon-star-2">أظهر الإجابة</button>
+                </div>
+            </div>
+        </section>
+        <!--==========================
+            END TAB 3 CONTENT
+        ==========================-->
+
+        <!--==========================
+            START TAB 4 CONTENT
+        ==========================-->
+        <section id="section4" class="tabbed">
+            <div class="setting_wrapper">
+                <div class="df_setting">
+                    <div class="font_type">
+                        <div class="a_1">
+                            <select class="form-control ">
+                                <option>dexter</option>
+                                <option>preacher</option>
+                                <option>got</option>
+                                <option>nabil elbono</option>
+                                <option>abdo</option>
+                            </select>
+                        </div>
+                        <label class="a_2 col-form-label"><span >: نوع الخط</span></label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="font_size">
+                        <input class="b_1" type="number" min="40" max="100" placeholder="70" required>
+                        <label class="b_2 col-form-label">: حجم الخط</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="papper_number">
+                        <input type="number" min="1" max="500" placeholder="1" required>
+                        <label class="c_2 col-form-label">: عدد الأوراق المطلوب تكوينها</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="cheack_1">
+                        <input class="d_1 form-check-input position-static" type="checkbox" id="blankCheckbox">
+                        <label class="d_2 ">: ترتيب عشوائي للمسائل</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="cheack_2">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox">
+                        <label>: تضمين ورقة الاجابات</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="color_peacker_1">
+                        <input type="color" id="favcolor" name="favcolor" value="#000">
+                        <label>: أختر اللون</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="color_peacker_2">
+                        <input type="color" id="favcolor" name="favcolor" value="#000">
+                        <label>: أختر اللون</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="color_peacker_3">
+                        <input type="color" id="favcolor" name="favcolor" value="#000">
+                        <label>: أختر اللون</label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="save-btn">
+                        <button class="btn_2 icon-cog float-right">حفظ الإعدادات</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==========================
+            END TAB 4 CONTENT
+        ==========================-->
+
+        <!--==========================
+            START TAB 5 CONTENT
+        ==========================-->
+        <section id="section5" class="tabbed">
+
+        </section>
+        <!--==========================
+            END TAB 5 CONTENT
+        ==========================-->
+
+        <!--==========================
+            START JS SCRIPTS
+        ==========================-->
+
+        <!-- jQuery Lib -->
+        <script src="./resources/jquery.min.js"></script> 
+        <!-- Bootstrap Lib -->
+        <script src="./resources/bootstrap.bundle.min.js"></script>
+        <!-- Data Table lib -->
+        <script src="./resources/jquery.dataTables.js"></script>
+        <!-- Row Record -->
+        <script src="./resources/dataTables.rowReorder.min.js"></script>
+        <!-- Zooming Img Plugin -->
+        <script src="./resources/jquery.fs.zoomer.js"></script>
+        <!-- Our Main Js file -->
+        <script src="./resources/main.js"></script>
+        <!--Backend Js file (shit starts here) -->
+        <script src="./resources/backend.js"></script>
+
+        <!--==========================
+            END JS SCRIPTS
+        ==========================-->
+                
+    </body>
+</html>
