@@ -39,6 +39,12 @@ var dataSet = [
     
         ["", "m00_2_3", "<img class='img' src='./images/m00_2_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
 
+        ["", "m00_2_4", "<img class='img' src='./images/m00_2_4.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
+        ["", "m00_2_5", "<img class='img' src='./images/m00_2_5.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
+        ["", "m00_3", "<img class='img' src='./images/m00_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
     ]; 
 
 
