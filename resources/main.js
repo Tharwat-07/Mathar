@@ -147,13 +147,34 @@ $(document).ready(function(){
 		}],
 		
     });
-    
-    /* clear table 2 by button click */
+
+    // Show alert if the table is empty when clicked on the Clear Table button
     $( "#clear_table_2" ).click(function() {
-	  empty_table.clear().draw();
-	  
+
+        if ($("#empty_table tr").length <= 2) {
+            swal("الجدول فارغ بالفعل");
+        } else {
+            swal({
+                title: "هل متأكد من هذه الخطوة ؟",
+                text: "بمجرد تفريغ الجدول لن تتمكن من استعادت المسائل مرة اخري",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+            if (willDelete) {
+                empty_table.clear().draw();
+                swal("! تم تفريغ الجدول بنجاح", {
+                icon: "success",
+                });
+            } else {
+                swal("! تم التراجع عن تفريغ الجدول");
+            }
+            });
+        }
+
     });
-    
+
     /* move row between tables */ 
     $(".btn_1").on('click', function() {
 
@@ -178,21 +199,24 @@ $(document).ready(function(){
         row = row.append('<th>'+options_t1+'<button class="r_b_s btn_1 icon-remove"><span>أزالة</span></button></th>');
         row  = row.html();
         empty_table.row.add($('<tr>'+row+'</tr>')).draw();
-        
-        /* remove row from table 2 - EVENT */ 
-        $('#empty_table tbody').on( 'click', '.btn_1', function () {
-            empty_table
-                .row( $(this).parents('tr') )
-                .remove()
-                .draw();
-        });
  
         // class .r_b_s for ( Remove Button ) sound click *don't get confused*
-        // this code for ( Remove Button ) sound click only * look at  * 
+        // this code for ( Remove Button ) sound click only 
+        // look at line 234 if you need the sound click code for all buttons 
         $(".r_b_s").on('click', function() { 
             audio.play();
         });
-        
+
+    });
+
+    /* remove row from table 2 - EVENT */ 
+    $('#empty_table tbody').on( 'click', '.btn_1', function () {
+
+        empty_table
+            .row( $(this).parents('tr') )
+            .remove()
+            .draw()
+
     });
     
     /* collect data from table 2 by button click */
@@ -222,8 +246,9 @@ $(document).ready(function(){
 
     });
 
-    // teansfir active class fot tabs
+    // teansfir active class for tabs
     $(".nav-link").click(function() {
+
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
 
@@ -233,7 +258,9 @@ $(document).ready(function(){
 // End docmennt ready
 
 $(document).on('keyup', 'table input', function() {
+
     $(this).attr('value',$(this).val());
+
 }); 
 
 // Img Zooming Plugin
