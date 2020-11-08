@@ -151,12 +151,12 @@ $(document).ready(function(){
     // Show alert if the table is empty when clicked on the Clear Table button
     $( "#clear_table_2" ).click(function() {
 
-        if (empty_table.data().count() ==0) {
+        if (empty_table.data().count() == 0) {
             swal("الجدول فارغ بالفعل");
         } else {
             swal({
                 title: "هل متأكد من هذه الخطوة ؟",
-                text: "بمجرد تفريغ الجدول لن تتمكن من استعادت المسائل مرة اخري",
+                text: "بمجرد تفريغ الجدول لن تتمكن من إستعادة المسائل مرة اخرى",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
