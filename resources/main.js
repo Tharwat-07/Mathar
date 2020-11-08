@@ -23,7 +23,7 @@ $(window).load(function() {
 
 var dataSet = [
 
-        ["", "me111", "<img class='img' src='./images/1.png' alt='img'>",
+        ["", "m00_1", "<img class='img' src='./images/m00_1.png' alt='img'>",
          "عنوان رئيسى", 
          "", "", "", "", "عام",
          `<div class='settings'>
@@ -33,11 +33,17 @@ var dataSet = [
         <button class='btn_1 icon-plus'><span>أختر</span></button>
         `],
     
-        ["", "me112", "<img class='img' src='./images/2.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_1", "<img class='img' src='./images/m00_2_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
     
-        ["", "me113", "<img class='img' src='./images/3.png' alt='img'>", "random3 text", 1, 1, "page 12", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_2", "<img class='img' src='./images/m00_2_2.png' alt='img'>", "random3 text", 1, 1, "page 12", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
     
-        ["", "me114", "<img class='img' src='./images/4.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_3", "<img class='img' src='./images/m00_2_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
+        ["", "m00_2_4", "<img class='img' src='./images/m00_2_4.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
+        ["", "m00_2_5", "<img class='img' src='./images/m00_2_5.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
+        ["", "m00_3", "<img class='img' src='./images/m00_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
 
     ]; 
 
