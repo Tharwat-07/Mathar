@@ -370,16 +370,13 @@ table.dataTable tbody td {
 
 /* Table white Spcee */
 .dataTables_wrapper {
-    margin: 30px 25px;
+    margin: 30px 20px;
 }
 
 /* search box style */
 #full_table_filter {
     margin-bottom: 20px;
 }
-
-
-
 
 .dataTables_wrapper .dataTables_filter input {
     border: 2px solid #dee2e6;

@@ -75,7 +75,6 @@
                 </div>
             </div>
             <table id="empty_table" class="display table table-bordered"> 
-                
             </table>  
         </section>
         <!--==========================
@@ -88,21 +87,8 @@
         <section id="section3" class="tabbed">
             <!-- image-->
             <div class="zoomer" style="background-color: lightgrey;"> <!--= container: made to make a backgroud-color  =-->
-                <div id="wheelzoom.exe" style="display: block;"></div> <!--= the image container =-->
+                <div id="wheelzoom.exe"></div> <!--= the image container =-->
             </div>
-            
-                <script src="./resources/openseadrag/openseadragon.min.js"></script>
-                <script type="text/javascript">
-                    var viewer = OpenSeadragon({
-                        id: "wheelzoom.exe",
-                        prefixUrl: "./resources/openseadrag/images/", <!--= icons path =--> 
-                        tileSources: {
-                                        type: 'image',
-                                        url:  'im.png' <!--= the image path =--> 
-                                    }
-                    });
-                </script>
-
             <!-- Buttons -->
             <div class="row">
                 <div class="col-12 text-center">
@@ -197,12 +183,13 @@
         <script src="./resources/jquery.min.js"></script> 
         <!-- Bootstrap Lib -->
         <script src="./resources/bootstrap.bundle.min.js"></script>
+        <script src="./resources/tabs.js"></script>
         <!-- Data Table lib -->
         <script src="./resources/jquery.dataTables.js"></script>
         <!-- Row Record -->
         <script src="./resources/dataTables.rowReorder.min.js"></script>
         <!-- Zooming Img Plugin -->
-        <script src="./resources/jquery.fs.zoomer.js"></script>
+        <script src="./resources/openseadrag/openseadragon.min.js"></script>
         <!-- Our Main Js file -->
         <script src="./resources/main.js"></script>
         <!--Backend Js file (shit starts here) -->
