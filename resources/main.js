@@ -156,7 +156,7 @@ $(document).ready(function(){
         } else {
             swal({
                 title: "هل متأكد من هذه الخطوة ؟",
-                text: "بمجرد تفريغ الجدول لن تتمكن من استعادت المسائل مرة اخري",
+                text: "بمجرد تفريغ الجدول لن تتمكن من استعادة المسائل مرة اخري",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
