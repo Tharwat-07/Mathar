@@ -30,7 +30,7 @@ var dataSet = [
 			"عنوان رئيسى", 
 			"", "", "", "", "عام",
 			`<div class='settings'>
-				<input id='in1' placeholder='عنوان رئيسى' type='text'>
+				<input id='in1' value='عنوان رئيسى' type='text'>
 				<label for='in1'>:العنوان</label> 
 			</div>
 			<button class='btn_1 icon-plus'><span>أختر</span></button>`
