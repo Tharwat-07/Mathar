@@ -23,7 +23,7 @@ $(window).load(function() {
 
 var dataSet = [
 
-        ["", "m00_1", "<img class='img' src='./images/m00_1.png' alt='img'>",
+        ["", "title", "<img class='img' src='./images/title.png' alt='img'>",
          "عنوان رئيسى", 
          "", "", "", "", "عام",
          `<div class='settings'>
@@ -32,7 +32,8 @@ var dataSet = [
           </div>
         <button class='btn_1 icon-plus'><span>أختر</span></button>
         `],
-    
+    	["", "m00_1", "<img class='img' src='./images/m00_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+
         ["", "m00_2_1", "<img class='img' src='./images/m00_2_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
     
         ["", "m00_2_2", "<img class='img' src='./images/m00_2_2.png' alt='img'>", "random3 text", 1, 1, "page 12", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
