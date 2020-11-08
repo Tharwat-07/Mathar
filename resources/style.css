@@ -92,40 +92,38 @@
 	font-style: normal;
 }
 
-
 /*-----------------------------------------------------------------------
 01. END APP FONTS
 -----------------------------------------------------------------------*/
-
 
 /*-----------------------------------------------------------------------
   AHMED4CSS entered
 -----------------------------------------------------------------------*/
 /* table options stuff */
-div.settings {
-    display:grid;
-    grid-template-columns: max-content max-content;
-    grid-gap:5px;
-    margin:10px;
+.settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px;
 }
-div.settings label       { text-align:left; }
-div.settings label:after { content: ":"; }
 
+.settings label  { 
+    text-align:left; 
+}
 
 input {
   text-align: center
 }
+
 /*-----------------------------------------------------------------------
   AHMED4CSS exits
 -----------------------------------------------------------------------*/
-
 
 /*-----------------------------------------------------------------------
   02. START GENERAL STYLES
 -----------------------------------------------------------------------*/
 
 /* scrollbar */
-
 ::-webkit-scrollbar-thumb {
     background-color: #0db379;  
 }
@@ -379,14 +377,14 @@ table.dataTable tbody td {
 }
 
 .dataTables_wrapper .dataTables_filter input {
-    border: 2px solid #dee2e6;
+    border: 1px solid #dee2e6;
     padding: 5px;
     background-color: #fff;
     margin-right: 5px;
 }
 
 .dataTables_wrapper .dataTables_filter input:focus {
-    border: 2px solid #0db379;
+    border: 1px solid #0db379;
     box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
 }
 
@@ -397,7 +395,7 @@ table.dataTable tbody td {
 
 #full_table_length select {
     margin: 0 7px;
-    border: 2px solid #dee2e6;
+    border: 1px solid #dee2e6;
     background-color: #fff;
     padding: 7px;
 }
@@ -447,7 +445,7 @@ table.dataTable tbody td {
 
 /* For just Center ( Remove Button ) HADADAY */
 #section2 .r_b_s {
-    margin-top: 15px;
+
 }
 
 /*-----------------------------------------------------------------------

@@ -23,15 +23,19 @@ $(window).load(function() {
 
 var dataSet = [
 
-        ["", "title", "<img class='img' src='./images/title.png' alt='img'>",
-         "عنوان رئيسى", 
-         "", "", "", "", "عام",
-         `<div class='settings'>
-            <label for='in1'>العنوان</label> 
-            <input id='in1' value='عنوان رئيسى' type='text' />
-          </div>
-        <button class='btn_1 icon-plus'><span>أختر</span></button>
-        `],
+		// Title input
+        [
+			"", "title", 
+			"<img class='img' src='./images/title.png' alt='img'>",
+			"عنوان رئيسى", 
+			"", "", "", "", "عام",
+			`<div class='settings'>
+				<input id='in1' placeholder='عنوان رئيسى' type='text'>
+				<label for='in1'>:العنوان</label> 
+			</div>
+			<button class='btn_1 icon-plus'><span>أختر</span></button>`
+		],
+		
     	["", "m00_1", "<img class='img' src='./images/m00_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
 
         ["", "m00_2_1", "<img class='img' src='./images/m00_2_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
@@ -58,6 +62,7 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var t = $('#full_table').DataTable( {
+
         data: dataSet,
         columns: [
             { title: "index" },
@@ -72,16 +77,13 @@ $(document).ready(function(){
             { title: "options" }
         ],
 
-        
         "columnDefs": [{
-            "searchable": true,
-            "orderable": true,
-            "targets": 0,
-            "className": "dt-center", 
-            "targets": "_all"
-        },
-                        //{ "visible": false, "targets": 3 }
-        ],
+				"searchable": true,
+				"orderable": true,
+				"targets": 0,
+				"className": "dt-center", 
+				"targets": "_all"
+        }],
         
         "order": [[ 0, 'asc' ]],
         "pageLength": 50,
@@ -101,20 +103,21 @@ $(document).ready(function(){
                 "sNext": "التالي",
                 "sLast": "الأخير"
             }
-        }    
+        }
         
     });
     
-    
-
     t.on('order.dt search.dt', function () {
+
         t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
-        });
+		});
+		
     }).draw();
     
     /* radio-active */ 
     var empty_table = $('#empty_table').DataTable({
+
         rowReorder: true,
         data: [],
         columns: [
@@ -141,30 +144,36 @@ $(document).ready(function(){
             "targets": 0,
             "className": "dt-center", 
             "targets": "_all"
-        }],
+		}],
+		
     });
     
     /* clear table 2 by button click */
     $( "#clear_table_2" ).click(function() {
-      empty_table.clear().draw();
+	  empty_table.clear().draw();
+	  
     });
-    
     
     /* move row between tables */ 
     $(".btn_1").on('click', function() {
-        var row = $(this).closest('tr').clone();
+
+		var row = $(this).closest('tr').clone();
+		
         //collect options cell - table 1.
         var options_t1 = row.find('td:last-child');
-        options_t1.find('button').remove();
+		options_t1.find('button').remove();
+		
         // convert inputs to <p> -> table 2.
         $('input', options_t1).each(function() {
             $(this).replaceWith('<p id="'+this.id+'">'+this.value+'</p>');
         });
-        options_t1 = options_t1.html();
+		options_t1 = options_t1.html();
+		
         //remove options cell before adding the row to table 2.
         row.find('td:last-child').remove();
         row.find('td:first-child').html(ict2);
-        ict2 = ict2 + 1
+		ict2 = ict2 + 1
+		
         //processing the row then adding it to table 2 .
         row = row.append('<th>'+options_t1+'<button class="r_b_s btn_1 icon-remove"><span>أزالة</span></button></th>');
         row  = row.html();
@@ -177,7 +186,6 @@ $(document).ready(function(){
                 .remove()
                 .draw();
         });
-        
  
         // class .r_b_s for ( Remove Button ) sound click *don't get confused*
         // this code for ( Remove Button ) sound click only * look at  * 
@@ -214,8 +222,6 @@ $(document).ready(function(){
 
     });
 
-
-
     // teansfir active class fot tabs
     $(".nav-link").click(function() {
         $('.nav-link').removeClass('active');
@@ -223,8 +229,6 @@ $(document).ready(function(){
 
     });
     
-    
-
 }); 
 // End docmennt ready
 
@@ -244,4 +248,5 @@ var viewer = OpenSeadragon({
 
 });
 
+// Trigger Tabs PLugin
 new Tabby('[data-tabs]');
