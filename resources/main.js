@@ -21,34 +21,53 @@ $(window).load(function() {
 });
 
 
+/* dataSet custom variables to make me write less stuff when adding data to table :D */
+var cBtn1 = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
+function image(image){return "<img class='img' src='./images/"+image+"' alt='img'>"};
+/* --------------------------------------------------------------------------------- */
+
 var dataSet = [
 
 		// Title input
         [
 			"", "title", 
-			"<img class='img' src='./images/title.png' alt='img'>",
+			image('title.png'),
 			"عنوان رئيسى", 
 			"", "", "", "", "عام",
 			`<div class='settings'>
 				<input id='in1' value='عنوان رئيسى' type='text'>
 				<label for='in1'>:العنوان</label> 
 			</div>
-			<button class='btn_1 icon-plus'><span>أختر</span></button>`
+			`+cBtn1
 		],
 		
-    	["", "m00_1", "<img class='img' src='./images/m00_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+    	["", "m00_1", image('m00_1.png'), "random2 text", 1, 0, "page:13m1", "graphs", "solve equation", cBtn1],
 
-        ["", "m00_2_1", "<img class='img' src='./images/m00_2_1.png' alt='img'>", "random2 text", 1, 1, "page 11", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_1", image('m00_2_1.png'), "random2 text", 1, 0, "page:13m2-1", "MCQ", "solve equation", cBtn1],
     
-        ["", "m00_2_2", "<img class='img' src='./images/m00_2_2.png' alt='img'>", "random3 text", 1, 1, "page 12", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_2", image('m00_2_2.png'), "random3 text", 1, 0, "page:13m2-2", "MCQ", "solve equation", cBtn1],
     
-        ["", "m00_2_3", "<img class='img' src='./images/m00_2_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_3", image('m00_2_3.png'), "random4 text", 1, 0, "page:13m2-3", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_2_4", "<img class='img' src='./images/m00_2_4.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_4", image('m00_2_4.png'), "random4 text", 1, 0, "page:13m2-4", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_2_5", "<img class='img' src='./images/m00_2_5.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_2_5", image('m00_2_5.png'), "random4 text", 1, 0, "page:13m2-5", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_3", "<img class='img' src='./images/m00_3.png' alt='img'>", "random4 text", 1, 1, "page 13", "choices", "solve equation", "<button class='btn_1 icon-plus'><span>أختر</span></button>"],
+        ["", "m00_3", image('m00_3.png'), "random4 text", 1, 0, "page:13m2-3", "solve", "solve equation", cBtn1],
+
+        ["", "m00_4", image('m00_4.png'), "random4 text", 1, 0, "page:14m4", "solve", "solve equation", cBtn1],
+
+        ["", "m00_5", image('m00_5.png'), "random4 text", 1, 0, "page:14m5", "solve", "solve equation", cBtn1],
+
+        ["", "m00_6", image('m00_6.png'), "random4 text", 1, 0, "page:14m6", "solve", "solve equation", cBtn1],
+
+        ["", "m00_7_1", image('m00_7_1.png'), "random4 text", 1, 0, "page:14m7-1", "MCQ", "solve equation", cBtn1],
+
+        ["", "m00_7_2", image('m00_7_2.png'), "random4 text", 1, 0, "page:14m7-2", "MCQ", "solve equation", cBtn1],
+
+        ["", "m00_7_3", image('m00_7_3.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        ["", "m00_7_4", image('m00_7_4.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
 
     ]; 
 
