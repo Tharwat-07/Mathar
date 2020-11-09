@@ -23,15 +23,15 @@ $(window).load(function() {
 
 /* dataSet custom variables to make me write less stuff when adding data to table :D */
 var cBtn1 = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
-function image(image){return "<img class='img' src='./images/"+image+"' alt='img'>"};
+function image(image){return "<img class='img' src='./images/"+image+".png' alt='img'>"};
 /* --------------------------------------------------------------------------------- */
 
 var dataSet = [
 
 		// Title input
         [
-			"", "title", 
-			image('title.png'),
+			0, "title", 
+			image('title'),
 			"عنوان رئيسى", 
 			"", "", "", "", "عام",
 			`<div class='settings'>
@@ -41,33 +41,47 @@ var dataSet = [
 			`+cBtn1
 		],
 		
-    	["", "m00_1", image('m00_1.png'), "random2 text", 1, 0, "page:13m1", "graphs", "solve equation", cBtn1],
+    	[1, "m00_1", image('m00_1'), "random2 text", 1, 0, "page:13m1", "graphs", "solve equation", cBtn1],
 
-        ["", "m00_2_1", image('m00_2_1.png'), "random2 text", 1, 0, "page:13m2-1", "MCQ", "solve equation", cBtn1],
+        [2, "m00_2_1", image('m00_2_1'), "random2 text", 1, 0, "page:13m2-1", "MCQ", "solve equation", cBtn1],
     
-        ["", "m00_2_2", image('m00_2_2.png'), "random3 text", 1, 0, "page:13m2-2", "MCQ", "solve equation", cBtn1],
+        [3, "m00_2_2", image('m00_2_2'), "random3 text", 1, 0, "page:13m2-2", "MCQ", "solve equation", cBtn1],
     
-        ["", "m00_2_3", image('m00_2_3.png'), "random4 text", 1, 0, "page:13m2-3", "MCQ", "solve equation", cBtn1],
+        [4, "m00_2_3", image('m00_2_3'), "random4 text", 1, 0, "page:13m2-3", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_2_4", image('m00_2_4.png'), "random4 text", 1, 0, "page:13m2-4", "MCQ", "solve equation", cBtn1],
+        [5, "m00_2_4", image('m00_2_4'), "random4 text", 1, 0, "page:13m2-4", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_2_5", image('m00_2_5.png'), "random4 text", 1, 0, "page:13m2-5", "MCQ", "solve equation", cBtn1],
+        [6, "m00_2_5", image('m00_2_5'), "random4 text", 1, 0, "page:13m2-5", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_3", image('m00_3.png'), "random4 text", 1, 0, "page:13m2-3", "solve", "solve equation", cBtn1],
+        [7, "m00_3", image('m00_3'), "random4 text", 1, 0, "page:13m2-3", "solve", "solve equation", cBtn1],
 
-        ["", "m00_4", image('m00_4.png'), "random4 text", 1, 0, "page:14m4", "solve", "solve equation", cBtn1],
+        [8, "m00_4", image('m00_4'), "random4 text", 1, 0, "page:14m4", "solve", "solve equation", cBtn1],
 
-        ["", "m00_5", image('m00_5.png'), "random4 text", 1, 0, "page:14m5", "solve", "solve equation", cBtn1],
+        [9, "m00_5", image('m00_5'), "random4 text", 1, 0, "page:14m5", "solve", "solve equation", cBtn1],
 
-        ["", "m00_6", image('m00_6.png'), "random4 text", 1, 0, "page:14m6", "solve", "solve equation", cBtn1],
+        [10, "m00_6", image('m00_6'), "random4 text", 1, 0, "page:14m6", "solve", "solve equation", cBtn1],
 
-        ["", "m00_7_1", image('m00_7_1.png'), "random4 text", 1, 0, "page:14m7-1", "MCQ", "solve equation", cBtn1],
+        [11, "m00_7_1", image('m00_7_1'), "random4 text", 1, 0, "page:14m7-1", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_7_2", image('m00_7_2.png'), "random4 text", 1, 0, "page:14m7-2", "MCQ", "solve equation", cBtn1],
+        [12, "m00_7_2", image('m00_7_2'), "random4 text", 1, 0, "page:14m7-2", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_7_3", image('m00_7_3.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+        [13, "m00_7_3", image('m00_7_3'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
 
-        ["", "m00_7_4", image('m00_7_4.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+        [14, "m00_7_4", image('m00_7_4'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_7_5", image('m00_7_5'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_7_6", image('m00_7_6'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_7_7", image('m00_7_7'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_7_8", image('m00_7_8'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_7_9", image('m00_7_9'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_8", image('m00_8'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+
+        [14, "m00_9", image('m00_9'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
 
     ]; 
 
