@@ -208,7 +208,6 @@ $(document).ready(function(){
 
     // Show alert if the table is empty when clicked on the Clear Table button
     $( "#clear_table_2" ).click(function() {
-
         if (empty_table.data().count() == 0) {
             swal({
                 text: "الجدول فارغ بالفعل",
@@ -222,7 +221,6 @@ $(document).ready(function(){
                 buttons: true,
                 buttons: ["الغاء", "موافق"],
                 dangerMode: true,
-
             })
             .then((willDelete) => {
             if (willDelete) {
@@ -233,28 +231,20 @@ $(document).ready(function(){
                 });
             } else {
                 swal("! تم التراجع عن تفريغ الجدول", {
-
+                    button: "حسناً",
                 });
             }
             });
         }
-<<<<<<< Updated upstream
-        
-=======
     });
 
     // alert if user collect data when table is empty
     $( "#collect_data_t2" ).click(function() {
-
         if (empty_table.data().count() == 0) {
-
             swal("يرجي اختيار مسائل اولاً", {
                 button: "حسناً",
-              });
-
+            });
         } 
-
->>>>>>> Stashed changes
     });
 
     /* move row between tables */ 
