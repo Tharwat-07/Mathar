@@ -23,17 +23,21 @@ $(window).load(function() {
 
 /* dataSet custom variables to make me write less stuff when adding data to table :D */
 var cBtn1 = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
-function image(image){return "<img class='img' src='./images/"+image+"' alt='img'>"};
-/* --------------------------------------------------------------------------------- */
+function image(image){return "<img class='img' src='./images/"+image+".png' alt='img'>"};
 
+function text(txt){
+    return `<div id="textCell" title="${txt}" style="height:50px;overflow: hidden; text-overflow: ellipsis;">
+                ${txt}
+            </div>`;
+};
+/* -------------------------------------------------------------------------------- */
 var dataSet = [
 
 		// Title input
         [
-			"", "title", 
-			image('title.png'),
-			"عنوان رئيسى", 
-			"", "", "", "", "عام",
+			"عنوان رئيسى", "title", 
+			image('title'),
+			"", "", "", "", "عنوان رئيسى",
 			`<div class='settings'>
 				<input id='in1' value='عنوان رئيسى' type='text'>
 				<label for='in1'>:العنوان</label> 
@@ -41,33 +45,69 @@ var dataSet = [
 			`+cBtn1
 		],
 		
-    	["", "m00_1", image('m00_1.png'), "random2 text", 1, 0, "page:13m1", "graphs", "solve equation", cBtn1],
+    	[text("أوجد مجموعة الحل فى ح للمعادلة : د(س)=0 فى كل شكل."), "m00_1", image('m00_1'), 
+         1, 0, "ص13س1", "graphs", "حل المعادلة", cBtn1],
 
-        ["", "m00_2_1", image('m00_2_1.png'), "random2 text", 1, 0, "page:13m2-1", "MCQ", "solve equation", cBtn1],
+        [text("إذا كان منحنى الدالة التربيعية د يقطع محور السينات فى النقطتين (2،0)،(-3،0) فإن مجموعة حل المعادلة : د(س)=0 فى ح هى"), "m00_2_1", image('m00_2_1'), 
+         1, 0, "ص13س2-1", "MCQ", "حل المعادلة", cBtn1],
     
-        ["", "m00_2_2", image('m00_2_2.png'), "random3 text", 1, 0, "page:13m2-2", "MCQ", "solve equation", cBtn1],
+        [text("مجموعة حل المعادلة :س^2-س=0 فى ح هى"), "m00_2_2", image('m00_2_2'), 
+         1, 0, "ص13س2-2", 
+         "MCQ", "حل المعادلة", cBtn1],
     
-        ["", "m00_2_3", image('m00_2_3.png'), "random4 text", 1, 0, "page:13m2-3", "MCQ", "solve equation", cBtn1],
+        [text("إذا كانت: د(س)=س^2+بس+ج،س=2 أحد جذرى المعادلة:د(س)=0 فإن:د(2)="), "m00_2_3", image('m00_2_3'), 
+         1, 0, "ص13س2-3", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_2_4", image('m00_2_4.png'), "random4 text", 1, 0, "page:13m2-4", "MCQ", "solve equation", cBtn1],
+        [text("إذا كان: س=3 جذراً للمعادلة:س^2+مس=3 فإن: م="), "m00_2_4", image('m00_2_4'), 
+         1, 0, "ص13س2-4", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_2_5", image('m00_2_5.png'), "random4 text", 1, 0, "page:13m2-5", "MCQ", "solve equation", cBtn1],
+        [text("إذا كان أحد جذرى المعادلة: س^2-16=0 هو 4 فإن الجذر الأخر هو"), "m00_2_5", image('m00_2_5'), 
+         1, 0, "ص13س2-5", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_3", image('m00_3.png'), "random4 text", 1, 0, "page:13m2-3", "solve", "solve equation", cBtn1],
+        [text("أوجد جبرياً مجموعة حل كل من المعادلات الآتية فى ح :"), "m00_3", image('m00_3'), 
+         1, 0, "ص13س3", "quest", "حل المعادلة", cBtn1],
 
-        ["", "m00_4", image('m00_4.png'), "random4 text", 1, 0, "page:14m4", "solve", "solve equation", cBtn1],
+        [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية باستخدام القانون العام مقرباً الناتج لرقم عشرى واحد :"), "m00_4", image('m00_4'), 
+         1, 0, "ص14س4", "quest", "حل المعادلة", cBtn1],
 
-        ["", "m00_5", image('m00_5.png'), "random4 text", 1, 0, "page:14m5", "solve", "solve equation", cBtn1],
+        [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية جبرياً وحقق الناتج بيانياً :"), "m00_5", image('m00_5'), 
+         1, 0, "ص14س5", "quest", "حل المعادلة", cBtn1],
 
-        ["", "m00_6", image('m00_6.png'), "random4 text", 1, 0, "page:14m6", "solve", "solve equation", cBtn1],
+        [text("إذا كان مجموع الأعداد الصحيحة المتتالية (1+2+3+...+ن) يعطى بالعلاقة: ج=ن/2(1+ن) فكم عدداً صحيحاً متتالياً بدءاً من العدد 1 يكون مجموعها مساوياً :"), "m00_6", image('m00_6'), 
+         1, 0, "ص14س6", "quest", "حل المعادلة", cBtn1],
 
-        ["", "m00_7_1", image('m00_7_1.png'), "random4 text", 1, 0, "page:14m7-1", "MCQ", "solve equation", cBtn1],
+        [text("الشرط الذى يجعل المعادلة: اس^2+بس+ج=0 تربيعية هو"), "m00_7_1", image('m00_7_1'), 
+         1, 0, "ص14س7-1", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_7_2", image('m00_7_2.png'), "random4 text", 1, 0, "page:14m7-2", "MCQ", "solve equation", cBtn1],
+        [text("إذا كان : (ص-4)^2=36 ، ص<0 فإن : ص+4="), "m00_7_2", image('m00_7_2'), 
+         1, 0, "ص14س7-2", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_7_3", image('m00_7_3.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+        [text("إذا كان : س=4 أحد جذرى المعادلة : س^2+مس=4 فإن :"), "m00_7_3", image('m00_7_3'), 
+         1, 0, "ص14س7-3", "MCQ", "حل المعادلة", cBtn1],
 
-        ["", "m00_7_4", image('m00_7_4.png'), "random4 text", 1, 0, "page:14m7-3", "MCQ", "solve equation", cBtn1],
+        [text("الجذر المشترك للمعادلتين التربيعيتين: س^2-3س+2=0 ، 2س^2-5س+2=0 هو"), "m00_7_4", image('m00_7_4'), 
+         1, 0, "ص14س7-4", "MCQ", "حل المعادلة", cBtn1],
+
+        [text("إذا كان المنحني : ص=س(ا-س) فأي من العبارات التالية يكون صحيحاً ؟"), "m00_7_5", image('m00_7_5'), 
+         1, 0, "ص15س7-5", "MCQ", "حل المعادلة", cBtn1],
+
+        [text("الشكل المقابل يمثل المنحنى : ص=اس^2+بس+ج فأى مما يأتى صحيح ؟"), "m00_7_6", image('m00_7_6'), 
+         1, 0, "ص15س7-6", "MCQ", "حل المعادلة", cBtn1],
+
+        [text("فى الشكل المقابل : إذا كان حجم متوازى المستطيلات = 40سم^2 فإن : س= سم"), "m00_7_7", image('m00_7_7'), 
+         1, 0, "ص15س7-7", "MCQ", "حل المعادلة", cBtn1],
+
+        [text("فى الشكل المقابل : إذا كان مساحة المستطيل = 78 سم^2 فإن محيط المستطيل = سم"), "m00_7_8", image('m00_7_8'), 
+         1, 0, "ص15س7-8", "MCQ", "حل المعادلة", cBtn1],
+
+        [text("قطعة أرض على شكل مستطيل بعداه 6 ، 9 من الأمتار يراد مضاعفة مساحة هذه القطعة وذلك بزيادة كل من بعديها بنفس المقدار فإن المقدار المضاف يساوى أمتار."), "m00_7_9", image('m00_7_9'), 
+         1, 0, "ص15س7-8", "MCQ", "حل المعادلة,تطبيق", cBtn1],
+
+        [text("أوجد قيمة ا التى تجعل س=2 أحد جذرى المعادلة:"), "m00_8", image('m00_8'), 
+         1, 0, "ص15س8", "quest", "حل المعادلة", cBtn1],
+
+        [text("إذا كانت د(س)=اس^2+بس+ج ، د(0)=-3 أوجد قيمة : ا ، ب ، ج إذا علم أن جذرى المعادلة : د(س)=0 هما3 ، -1/2"), "m00_9", image('m00_9'), 
+         1, 0, "ص15س9", "quest", "حل المعادلة", cBtn1],
 
     ]; 
 
@@ -81,13 +121,12 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var t = $('#full_table').DataTable( {
-
+        rowReorder:false,
         data: dataSet,
         columns: [
             { title: "index" },
             { title: "id" },
             { title: "image" },
-            { title: "text" },
             { title: "year" },
             { title: "lesson" },
             { title: "reference" },
@@ -98,13 +137,13 @@ $(document).ready(function(){
 
         "columnDefs": [{
 				"searchable": true,
-				"orderable": true,
+				"orderable": false,
 				"targets": 0,
 				"className": "dt-center", 
 				"targets": "_all"
-        }],
+        }], 
         
-        "order": [[ 0, 'asc' ]],
+        "order": [[ 5, 'asc' ]],
         "pageLength": 50,
         "bAutoWidth": false,
         "language": {
@@ -134,6 +173,7 @@ $(document).ready(function(){
 		
     }).draw();
     
+    t.rowReorder.disable();
     /* radio-active */ 
     var empty_table = $('#empty_table').DataTable({
 
@@ -143,7 +183,6 @@ $(document).ready(function(){
             { title: "index" },
             { title: "id" },
             { title: "image" },
-            { title: "text" },
             { title: "year" },
             { title: "lesson" },
             { title: "reference" },
