@@ -142,9 +142,8 @@ $(document).ready(function(){
 				"className": "dt-center", 
 				"targets": "_all"
         }], 
-        
+        "lengthChange":false,
         "order": [[ 5, 'asc' ]],
-        "pageLength": 50,
         "bAutoWidth": false,
         "language": {
             "sLengthMenu": "أظهر _MENU_ مدخلات",
