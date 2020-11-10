@@ -21,7 +21,7 @@ $(window).load(function() {
 });
 
 
-/* dataSet custom variables to make me write less stuff when adding data to table :D */
+/* dataSet custom variables to make me write less stuff when adding data to table :D */ // bandtio say OMG
 var cBtn1 = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
 function image(image){return "<img class='img' src='./images/"+image+".png' alt='img'>"};
 
@@ -210,27 +210,51 @@ $(document).ready(function(){
     $( "#clear_table_2" ).click(function() {
 
         if (empty_table.data().count() == 0) {
-            swal("الجدول فارغ بالفعل");
+            swal({
+                text: "الجدول فارغ بالفعل",
+                button: "حسناً",
+            });              
         } else {
             swal({
                 title: "هل متأكد من هذه الخطوة ؟",
                 text: "بمجرد تفريغ الجدول لن تتمكن من إستعادة المسائل مرة اخرى",
                 icon: "warning",
                 buttons: true,
+                buttons: ["الغاء", "موافق"],
                 dangerMode: true,
+
             })
             .then((willDelete) => {
             if (willDelete) {
                 empty_table.clear().draw();
                 swal("! تم تفريغ الجدول بنجاح", {
-                icon: "success",
+                    icon: "success",
+                    button: "حسناً",
                 });
             } else {
-                swal("! تم التراجع عن تفريغ الجدول");
+                swal("! تم التراجع عن تفريغ الجدول", {
+
+                });
             }
             });
         }
+<<<<<<< Updated upstream
         
+=======
+    });
+
+    // alert if user collect data when table is empty
+    $( "#collect_data_t2" ).click(function() {
+
+        if (empty_table.data().count() == 0) {
+
+            swal("يرجي اختيار مسائل اولاً", {
+                button: "حسناً",
+              });
+
+        } 
+
+>>>>>>> Stashed changes
     });
 
     /* move row between tables */ 
