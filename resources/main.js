@@ -230,7 +230,7 @@ $(document).ready(function(){
             }
             });
         }
-
+        
     });
 
     /* move row between tables */ 
