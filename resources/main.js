@@ -22,7 +22,7 @@ $(window).load(function() {
 
 
 /* dataSet custom variables to make me write less stuff when adding data to table :D */ // bandtio say OMG
-var cBtn1 = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
+var choose_row_btn = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
 function image(image){return "<img class='img' src='./images/"+image+".png' alt='img'>"};
 
 function text(txt){
@@ -42,72 +42,72 @@ var dataSet = [
 				<input id='in1' value='عنوان رئيسى' type='text'>
 				<label for='in1'>:العنوان</label> 
 			</div>
-			`+cBtn1
+			`+choose_row_btn
 		],
 		
     	[text("أوجد مجموعة الحل فى ح للمعادلة : د(س)=0 فى كل شكل."), "m00_1", image('m00_1'), 
-         1, 0, "ص13س1", "graphs", "حل المعادلة", cBtn1],
+         1, 0, "ص13س1", "graphs", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان منحنى الدالة التربيعية د يقطع محور السينات فى النقطتين (2،0)،(-3،0) فإن مجموعة حل المعادلة : د(س)=0 فى ح هى"), "m00_2_1", image('m00_2_1'), 
-         1, 0, "ص13س2-1", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص13س2-1", "MCQ", "حل المعادلة", choose_row_btn],
     
         [text("مجموعة حل المعادلة :س^2-س=0 فى ح هى"), "m00_2_2", image('m00_2_2'), 
          1, 0, "ص13س2-2", 
-         "MCQ", "حل المعادلة", cBtn1],
+         "MCQ", "حل المعادلة", choose_row_btn],
     
         [text("إذا كانت: د(س)=س^2+بس+ج،س=2 أحد جذرى المعادلة:د(س)=0 فإن:د(2)="), "m00_2_3", image('m00_2_3'), 
-         1, 0, "ص13س2-3", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص13س2-3", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان: س=3 جذراً للمعادلة:س^2+مس=3 فإن: م="), "m00_2_4", image('m00_2_4'), 
-         1, 0, "ص13س2-4", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص13س2-4", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان أحد جذرى المعادلة: س^2-16=0 هو 4 فإن الجذر الأخر هو"), "m00_2_5", image('m00_2_5'), 
-         1, 0, "ص13س2-5", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص13س2-5", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("أوجد جبرياً مجموعة حل كل من المعادلات الآتية فى ح :"), "m00_3", image('m00_3'), 
-         1, 0, "ص13س3", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص13س3", "quest", "حل المعادلة", choose_row_btn],
 
         [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية باستخدام القانون العام مقرباً الناتج لرقم عشرى واحد :"), "m00_4", image('m00_4'), 
-         1, 0, "ص14س4", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص14س4", "quest", "حل المعادلة", choose_row_btn],
 
         [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية جبرياً وحقق الناتج بيانياً :"), "m00_5", image('m00_5'), 
-         1, 0, "ص14س5", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص14س5", "quest", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان مجموع الأعداد الصحيحة المتتالية (1+2+3+...+ن) يعطى بالعلاقة: ج=ن/2(1+ن) فكم عدداً صحيحاً متتالياً بدءاً من العدد 1 يكون مجموعها مساوياً :"), "m00_6", image('m00_6'), 
-         1, 0, "ص14س6", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص14س6", "quest", "حل المعادلة", choose_row_btn],
 
         [text("الشرط الذى يجعل المعادلة: اس^2+بس+ج=0 تربيعية هو"), "m00_7_1", image('m00_7_1'), 
-         1, 0, "ص14س7-1", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص14س7-1", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان : (ص-4)^2=36 ، ص<0 فإن : ص+4="), "m00_7_2", image('m00_7_2'), 
-         1, 0, "ص14س7-2", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص14س7-2", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان : س=4 أحد جذرى المعادلة : س^2+مس=4 فإن :"), "m00_7_3", image('m00_7_3'), 
-         1, 0, "ص14س7-3", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص14س7-3", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("الجذر المشترك للمعادلتين التربيعيتين: س^2-3س+2=0 ، 2س^2-5س+2=0 هو"), "m00_7_4", image('m00_7_4'), 
-         1, 0, "ص14س7-4", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص14س7-4", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان المنحني : ص=س(ا-س) فأي من العبارات التالية يكون صحيحاً ؟"), "m00_7_5", image('m00_7_5'), 
-         1, 0, "ص15س7-5", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص15س7-5", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("الشكل المقابل يمثل المنحنى : ص=اس^2+بس+ج فأى مما يأتى صحيح ؟"), "m00_7_6", image('m00_7_6'), 
-         1, 0, "ص15س7-6", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص15س7-6", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("فى الشكل المقابل : إذا كان حجم متوازى المستطيلات = 40سم^2 فإن : س= سم"), "m00_7_7", image('m00_7_7'), 
-         1, 0, "ص15س7-7", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص15س7-7", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("فى الشكل المقابل : إذا كان مساحة المستطيل = 78 سم^2 فإن محيط المستطيل = سم"), "m00_7_8", image('m00_7_8'), 
-         1, 0, "ص15س7-8", "MCQ", "حل المعادلة", cBtn1],
+         1, 0, "ص15س7-8", "MCQ", "حل المعادلة", choose_row_btn],
 
         [text("قطعة أرض على شكل مستطيل بعداه 6 ، 9 من الأمتار يراد مضاعفة مساحة هذه القطعة وذلك بزيادة كل من بعديها بنفس المقدار فإن المقدار المضاف يساوى أمتار."), "m00_7_9", image('m00_7_9'), 
-         1, 0, "ص15س7-8", "MCQ", "حل المعادلة,تطبيق", cBtn1],
+         1, 0, "ص15س7-8", "MCQ", "حل المعادلة,تطبيق", choose_row_btn],
 
         [text("أوجد قيمة ا التى تجعل س=2 أحد جذرى المعادلة:"), "m00_8", image('m00_8'), 
-         1, 0, "ص15س8", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص15س8", "quest", "حل المعادلة", choose_row_btn],
 
         [text("إذا كانت د(س)=اس^2+بس+ج ، د(0)=-3 أوجد قيمة : ا ، ب ، ج إذا علم أن جذرى المعادلة : د(س)=0 هما3 ، -1/2"), "m00_9", image('m00_9'), 
-         1, 0, "ص15س9", "quest", "حل المعادلة", cBtn1],
+         1, 0, "ص15س9", "quest", "حل المعادلة", choose_row_btn],
 
     ]; 
 
@@ -161,19 +161,40 @@ $(document).ready(function(){
                 "sNext": "التالي",
                 "sLast": "الأخير"
             }
+        },
+        
+        // Cool feature: it makes the filter multi column filter so it filter many colmns at once not only one . 
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' );
+                } );
+            } );
         }
         
     });
     
+    // draw temp index increament on column 0.
     t.on('order.dt search.dt', function () {
 
         t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
 		});
-		
     }).draw();
     
-    t.rowReorder.disable();
     /* radio-active */ 
     var empty_table = $('#empty_table').DataTable({
 
@@ -237,7 +258,14 @@ $(document).ready(function(){
             });
         }
     });
-
+    
+    // draw temp index increament on column 0.
+    t.on('order.dt', function () {
+        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+		});
+    }).draw();
+    
     // alert if user collect data when table is empty
     $( "#collect_data_t2" ).click(function() {
         if (empty_table.data().count() == 0) {
@@ -246,7 +274,8 @@ $(document).ready(function(){
             });
         } 
     });
-
+    
+    
     /* move row between tables */ 
     $(".btn_1").on('click', function() {
 
