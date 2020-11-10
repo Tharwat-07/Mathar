@@ -1,3 +1,5 @@
+/* ALERT: PLAY ON ${https://www.youtube.com/watch?v=dQw4w9WgXcQ} when developing this file*/
+
 
 /*
 
@@ -143,8 +145,11 @@ $(document).ready(function(){
 				"targets": "_all"
         }], 
         "lengthChange":false,
+        "paging":false,
+        "bPaginate":false,
         "order": [[ 5, 'asc' ]],
         "bAutoWidth": true,
+        "bInfo":false,
         "language": {
             "sLengthMenu": "أظهر _MENU_ مدخلات",
             "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
@@ -188,7 +193,6 @@ $(document).ready(function(){
     
     // draw temp index increament on column 0.
     t.on('order.dt search.dt', function () {
-
         t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
 		});
@@ -210,11 +214,12 @@ $(document).ready(function(){
             { title: "tags" },
             { title: "options" }
         ],
-        "pageLength": 100,
+        "lengthChange":false,
         "bFilter": false,
         "bLengthChange": false,
         "bAutoWidth": false,
         "bPaginate": false,
+        "bInfo":false,
         
         "columnDefs": [{
             "searchable": false,
@@ -300,7 +305,8 @@ $(document).ready(function(){
         row  = row.html();
         empty_table.row.add($('<tr>'+row+'</tr>')).draw();
  
-        // class .r_b_s for ( Remove Button ) sound click *don't get confused*
+        // class .r_b_s for ( Remove Button ) sound click, BANDITO:*don't get confused*
+        // AHMED4END: *https://www.youtube.com/watch?v=BW1aX0IbZOE*
         // this code for ( Remove Button ) sound click only 
         // look at line 234 if you need the sound click code for all buttons 
         $(".r_b_s").on('click', function() { 
