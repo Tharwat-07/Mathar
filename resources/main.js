@@ -323,7 +323,7 @@ $(document).ready(function(){
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
         var id_per_row = empty_table.columns(1).data().toArray()[0];
-        var ops_per_row = empty_table.columns(9).data().toArray()[0];
+        var ops_per_row = empty_table.columns(8).data().toArray()[0];
         var id_cols_length = empty_table.rows()[0].length;
         var dict = {}
         console.log(id_cols_length)
