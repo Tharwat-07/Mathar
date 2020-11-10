@@ -144,7 +144,7 @@ $(document).ready(function(){
         }], 
         "lengthChange":false,
         "order": [[ 5, 'asc' ]],
-        "bAutoWidth": false,
+        "bAutoWidth": true,
         "language": {
             "sLengthMenu": "أظهر _MENU_ مدخلات",
             "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
