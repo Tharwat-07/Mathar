@@ -366,6 +366,15 @@ table.dataTable tbody td {
     box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
 }
 
+table.dataTable {
+    word-break: keep-all;
+    
+}
+
+table.dataTable tbody td {
+    word-break: break-all;
+    vertical-align: top;
+}
 /*-----------------------------------------------------------------------
 05. END FULL TABLE
 -----------------------------------------------------------------------*/
@@ -603,6 +612,8 @@ input:focus {
 input {
   text-align: center
 }
+
+
 
 /*-----------------------------------------------------------------------
   AHMED4CSS exits
