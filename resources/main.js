@@ -42,6 +42,7 @@ var dataSet = [
 			"", "", "", "عنوان رئيسى",
 			`<div class='settings'>
 				<input id='in1' value='عنوان رئيسى' type='text'>
+                <label for='in1'>:العنوان</label> 
 			</div>
 			`+choose_row_btn
 		],
@@ -122,17 +123,18 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var t = $('#full_table').DataTable( {
-        rowReorder:false,
+        
+        rowReorder:true,
         data: dataSet,
         columns: [
             { title: "index" },
             { title: "id" },
-            { title: "image" },
-            { title: "year lesson" },
-            { title: "reference" },
-            { title: "type" },
-            { title: "tags" },
-            { title: "options" }
+            { title: "المسئلة" },
+            { title: "السنة الدرس" },
+            { title: "المرجع" },
+            { title: "النوع" },
+            { title: "مفاتيح" },
+            { title: "إعدادات" }
         ],
 
         "columnDefs": [{
@@ -145,7 +147,7 @@ $(document).ready(function(){
         "lengthChange":false,
         "paging":false,
         "bPaginate":false,
-        "order": [[ 5, 'asc' ]],
+        "order": [[ 4, 'asc' ]],
         "bAutoWidth": false,
         "bInfo":false,
         "language": {
@@ -204,17 +206,17 @@ $(document).ready(function(){
         columns: [
             { title: "index" },
             { title: "id" },
-            { title: "image" },
-            { title: "year lesson" },
-            { title: "reference" },
-            { title: "type" },
-            { title: "tags" },
-            { title: "options" }
+            { title: "المسئلة" },
+            { title: "السنة الدرس" },
+            { title: "المرجع" },
+            { title: "النوع" },
+            { title: "مفاتيح" },
+            { title: "إعدادات" }
         ],
         "lengthChange":false,
         "bFilter": false,
         "bLengthChange": false,
-        "bAutoWidth": true,
+        "bAutoWidth": false,
         "bPaginate": false,
         "bInfo":false,
         
