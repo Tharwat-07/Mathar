@@ -42,7 +42,6 @@ var dataSet = [
 			"", "", "", "", "عنوان رئيسى",
 			`<div class='settings'>
 				<input id='in1' value='عنوان رئيسى' type='text'>
-				<label for='in1'>:العنوان</label> 
 			</div>
 			`+choose_row_btn
 		],

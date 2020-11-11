@@ -339,6 +339,7 @@ th {
 table.dataTable {
     color: #183a56;
 }
+
 table.dataTable tbody td {
     vertical-align: middle;
 }
@@ -363,48 +364,6 @@ table.dataTable tbody td {
 .dataTables_wrapper .dataTables_filter input:focus {
     border: 1px solid #0db379;
     box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
-}
-
-/* show entries box style */
-#full_table_length  {
-    margin-bottom: 20px;
-}
-
-#full_table_length select {
-    margin: 0 7px;
-    border: 1px solid #dee2e6;
-    background-color: #fff;
-    padding: 7px;
-}
-
-/* Paginate style */
-#full_table_paginate,
-.dataTables_info {
-    margin-top: 30px;
-}
-
-.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter,
-.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing,
-.dataTables_wrapper .dataTables_paginate {
-    color: #183a56;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current,
- .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-    color: #fff!important;
-    border: 1px solid #17cc8e;
-    background: #17cc8e;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    margin-left: 2px;
-    border-radius: 0;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    color: #fff !important;
-    border: 1px solid #17cc8e;
-    background: #17cc8e;
 }
 
 /*-----------------------------------------------------------------------
@@ -633,20 +592,12 @@ input:focus {
 09. END ALERTS
 -----------------------------------------------------------------------*/
 
-
 /*-----------------------------------------------------------------------
   AHMED4CSS entered
 -----------------------------------------------------------------------*/
 /* table options stuff */
-.settings {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 10px;
-}
-
-.settings label  { 
-    margin-left: 5px;
+.settings input  { 
+    margin-bottom: 10px;
 }
 
 input {
@@ -655,4 +606,19 @@ input {
 
 /*-----------------------------------------------------------------------
   AHMED4CSS exits
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+    START NOTES
+-----------------------------------------------------------------------*/
+
+/*
+
+Wdith 1340 px 
+height 620 px 
+
+*/
+
+/*-----------------------------------------------------------------------
+    END NOTES
 -----------------------------------------------------------------------*/
