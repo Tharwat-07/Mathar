@@ -72,7 +72,7 @@ var dataSet = [
          "1, 0", "ص14س4", "quest", "حل المعادلة", choose_row_btn],
 
         [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية جبرياً وحقق الناتج بيانياً :"), "m00_5", image('m00_5'), 
-         1, 0, "ص14س5", "quest", "حل المعادلة", choose_row_btn],
+         "1, 0", "ص14س5", "quest", "حل المعادلة", choose_row_btn],
 
         [text("إذا كان مجموع الأعداد الصحيحة المتتالية (1+2+3+...+ن) يعطى بالعلاقة: ج=ن/2(1+ن) فكم عدداً صحيحاً متتالياً بدءاً من العدد 1 يكون مجموعها مساوياً :"), "m00_6", image('m00_6'), 
          "1, 0", "ص14س6", "quest", "حل المعادلة", choose_row_btn],
@@ -146,7 +146,7 @@ $(document).ready(function(){
         "paging":false,
         "bPaginate":false,
         "order": [[ 5, 'asc' ]],
-        "bAutoWidth": true,
+        "bAutoWidth": false,
         "bInfo":false,
         "language": {
             "sLengthMenu": "أظهر _MENU_ مدخلات",
@@ -214,7 +214,7 @@ $(document).ready(function(){
         "lengthChange":false,
         "bFilter": false,
         "bLengthChange": false,
-        "bAutoWidth": false,
+        "bAutoWidth": true,
         "bPaginate": false,
         "bInfo":false,
         
