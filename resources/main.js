@@ -118,7 +118,7 @@ var dataSet = [
 
 
 $(document).ready(function(){
-
+    
     // INIT vars 
     var ict2 = 1
     // This var for ( Remove Button ) sound click only * H A D A D Y *
@@ -272,14 +272,7 @@ $(document).ready(function(){
 		});
     }).draw();
     
-    // alert if user collect data when table is empty
-    $( "#collect_data_t2" ).click(function() {
-        if (empty_table.data().count() == 0) {
-            swal("يرجي اختيار مسائل اولاً", {
-                button: "حسناً",
-            });
-        } 
-    });
+    
     
     
     /* move row between tables */ 
@@ -327,23 +320,37 @@ $(document).ready(function(){
 
     });
     
+
+    
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
-        var id_per_row = empty_table.columns(1).data().toArray()[0];
-        var ops_per_row = empty_table.columns(7).data().toArray()[0];
-        var id_cols_length = empty_table.rows()[0].length;
-        var dict = {}
-        console.log(id_cols_length)
-        for (var i = 0; i < id_cols_length; i++) {
-            //collect options as a dict from table 2 - perparing data to be sent to lord python.
-            var sdict = {};
-            $('p', ops_per_row[i]).each(function() {
-                sdict[$('label[for="'+this.id+'"]').html()]= $(this).text();
+        if (empty_table.data().count() == 0) {
+            swal("يرجي اختيار مسائل اولاً", {
+                button: "حسناً",
             });
-            dict[i] = sdict;
-        };
-        console.log(id_per_row); //[FUTURE]
-        console.log(JSON.stringify(dict)); //[FUTURE]
+        }
+        else {
+            var id_per_row = empty_table.columns(1).data().toArray()[0];
+            var ops_per_row = empty_table.columns(7).data().toArray()[0];
+            var id_cols_length = empty_table.rows()[0].length;
+            var dict = {}
+            //console.log(id_cols_length)
+            for (var i = 0; i < id_cols_length; i++) {
+                //collect options as a dict from table 2 - perparing data to be sent to lord python.
+                var sdict = {};
+                $('p', ops_per_row[i]).each(function() {
+                    sdict[$('label[for="'+this.id+'"]').html().replace(':','')]= $(this).text().replace(':','');
+                });
+                dict[i] = sdict;
+            };
+            
+            eel.hi(id_per_row, dict); //[Eel]
+            
+            swal("جارى صنع التمرين إذهب لنافذة المعاينة", {
+                button: "حسناً",
+                timer: 1500,
+            });
+        }
     });
     
     // and this code for all button sound click * H A D A D Y *
