@@ -1,20 +1,19 @@
 import eel
-
-
+from create import make
+import time
+import os 
 
 eel.init('web')
 
 @eel.expose
 def hi(*args):
-    print('js:',args)
 
     x,y,*_ = args
-    data = list(zip(x,y.values()))
-    a = open("hei.txt", 'w')
-    a.write(str(data))
-    a.close()
+    data = list(zip(x, map(str,y.values())))
 
-    return 99
+    m = make(data)
+    print(m)
+    return m
 
 eel.start('index.html',port=86)
 
