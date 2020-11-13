@@ -336,8 +336,10 @@ $(document).ready(function(){
     var viewer = OpenSeadragon({
         id: "wheelzoom.exe",
         prefixUrl: './resources/openseadrag/images/', /* icons path */
-        tileSource: tileSources,
     });
+    
+    viewer.setVisible(false);
+    
     var index = 1;
     $('#ToggleImages').on('click', function () {
       var oldTiledImage = viewer.world.getItemAt(index);
@@ -357,7 +359,6 @@ $(document).ready(function(){
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
         
-        
         if (empty_table.data().count() == 0) {
             swal("يرجي اختيار مسائل اولاً", {
                 button: "حسناً",
@@ -367,6 +368,9 @@ $(document).ready(function(){
         else {
             $('#collect_data_t2').fadeOut();
             $('#ToggleImages').fadeOut();
+            $('#saveImage').fadeOut();
+            viewer.setVisible(false);
+            
             var id_per_row = empty_table.columns(1).data().toArray()[0];
             var ops_per_row = empty_table.columns(7).data().toArray()[0];
             var id_cols_length = empty_table.rows()[0].length;
@@ -381,13 +385,25 @@ $(document).ready(function(){
             };
             
             async function run() {
-              tileSources = await eel.hi(id_per_row, dict)(); 
-              console.log("Got this from Python: " + tileSources[0]);
-              console.log("Got this from Python: " + tileSources[1]);
-              viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
-              index = 1;
-              $('#collect_data_t2').show();
-              $('#ToggleImages').show();
+                
+                tileSources = await eel.hi(id_per_row, dict)(); 
+                //console.log("Got this from Python: " + tileSources[0]);
+                //console.log("Got this from Python: " + tileSources[1]);
+                viewer.setVisible(false);
+                
+                viewer.addHandler('tile-loaded', function(){
+                    
+                    viewer.setVisible(true);
+                    $('#collect_data_t2').fadeIn();
+                    $('#ToggleImages').fadeIn();
+                    $('#saveImage').fadeIn();
+                    
+                });
+                
+                viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
+               
+                index = 1;
+                                  
             }
 
             run();
