@@ -121,6 +121,7 @@ $(document).ready(function(){
     
     // INIT vars 
     var ict2 = 1
+    var tileSources = [{type: 'image', url: '' }, {type: 'image', url: '' }]
     // This var for ( Remove Button ) sound click only * H A D A D Y *
     var audio = new Audio("resources/btnclk.wav"); 
 
@@ -255,12 +256,10 @@ $(document).ready(function(){
                 swal("! تم تفريغ الجدول بنجاح", {
                     icon: "success",
                     button: "حسناً",
-                });
-            } else {
-                swal("! تم التراجع عن تفريغ الجدول", {
-                    button: "حسناً",
+                    timer:1500
                 });
             }
+                
             });
         }
     });
@@ -321,20 +320,57 @@ $(document).ready(function(){
     });
     
 
+
+   
+    // IMAGE VIEWER CODE  //
+    tileSources = tileSources.map(function(tileSource, i) {
+      return {
+        tileSource: tileSource,
+        opacity: i === 0 ? 1 : 0,
+        preload: i === 1 ? true : false
+      };
+    });
+    
+    
+    // Img Zooming Plugin
+    var viewer = OpenSeadragon({
+        id: "wheelzoom.exe",
+        prefixUrl: './resources/openseadrag/images/', /* icons path */
+        tileSource: tileSources,
+    });
+    var index = 1;
+    $('#ToggleImages').on('click', function () {
+      var oldTiledImage = viewer.world.getItemAt(index);
+
+      index = (index + 1) % tileSources.length;
+      var nextIndex = (index + 1) % tileSources.length;
+
+      var newTiledImage = viewer.world.getItemAt(index);
+      var nextTiledImage = viewer.world.getItemAt(nextIndex);
+
+      oldTiledImage.setOpacity(0);
+      newTiledImage.setOpacity(1);
+      nextTiledImage.setPreload(true);
+    }); 
+    // IMAGE VIEWER CODE SEMI-END //
     
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
+        
+        
         if (empty_table.data().count() == 0) {
             swal("يرجي اختيار مسائل اولاً", {
                 button: "حسناً",
             });
-        }
+        } 
+        
         else {
+            $('#collect_data_t2').fadeOut();
+            $('#ToggleImages').fadeOut();
             var id_per_row = empty_table.columns(1).data().toArray()[0];
             var ops_per_row = empty_table.columns(7).data().toArray()[0];
             var id_cols_length = empty_table.rows()[0].length;
             var dict = {}
-            //console.log(id_cols_length)
             for (var i = 0; i < id_cols_length; i++) {
                 //collect options as a dict from table 2 - perparing data to be sent to lord python.
                 var sdict = {};
@@ -344,14 +380,21 @@ $(document).ready(function(){
                 dict[i] = sdict;
             };
             
-            eel.hi(id_per_row, dict); //[Eel]
-            
-            swal("جارى صنع التمرين إذهب لنافذة المعاينة", {
-                button: "حسناً",
-                timer: 1500,
-            });
+            async function run() {
+              tileSources = await eel.hi(id_per_row, dict)(); 
+              console.log("Got this from Python: " + tileSources[0]);
+              console.log("Got this from Python: " + tileSources[1]);
+              viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
+              index = 1;
+              $('#collect_data_t2').show();
+              $('#ToggleImages').show();
+            }
+
+            run();
         }
+        
     });
+    
     
     // and this code for all button sound click * H A D A D Y *
     $("button").on('click', function() {
@@ -378,17 +421,7 @@ $(document).on('keyup', 'table input', function() {
 
 }); 
 
-// Img Zooming Plugin
-var viewer = OpenSeadragon({
 
-	id: "wheelzoom.exe",
-	prefixUrl: "./resources/openseadrag/images/", /* icons path */
-	tileSources: {
-		type: 'image',
-		url:  'im.png' /* the image path */
-	}
-
-});
 
 // Trigger Tabs PLugin
 new Tabby('[data-tabs]');
