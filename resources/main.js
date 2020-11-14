@@ -338,6 +338,7 @@ $(document).ready(function(){
     // Img Zooming Plugin
     var viewer = OpenSeadragon({
         id: "wheelzoom.exe",
+        immediateRender: true,
         prefixUrl: './resources/openseadrag/images/', /* icons path */
     });
     
@@ -369,7 +370,7 @@ $(document).ready(function(){
         } 
         
         else {
-            $("#Tap3_loader_container").fadeIn();
+            $("#Tap3_loader_container").fadeIn("slow");
             $('#collect_data_t2').fadeOut();
             $('#ToggleImages').fadeOut();
             $('#saveImage').fadeOut();
@@ -401,11 +402,11 @@ $(document).ready(function(){
                     $('#collect_data_t2').fadeIn();
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
-                    $("#Tap3_loader_container").fadeOut();
+                    $("#Tap3_loader_container").fadeOut("slow");
                     
                 });
                 
-                viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
+                await viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
                
                 index = 1;
                                   
