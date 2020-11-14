@@ -113,7 +113,9 @@ var dataSet = [
 
         [text("إذا كانت د(س)=اس^2+بس+ج ، د(0)=-3 أوجد قيمة : ا ، ب ، ج إذا علم أن جذرى المعادلة : د(س)=0 هما3 ، -1/2"), "m00_9", image('m00_9'), 
          "L0", "ص15س9", "quest", "حل المعادلة", choose_row_btn],
-
+        
+        [text(""), "m11_1", image('m11_1'), 
+             "L0", "ص15س9", "quest", "حل المعادلة", choose_row_btn],
     ]; 
 
 
@@ -367,6 +369,7 @@ $(document).ready(function(){
         } 
         
         else {
+            $("#Tap3_loader_container").fadeIn();
             $('#collect_data_t2').fadeOut();
             $('#ToggleImages').fadeOut();
             $('#saveImage').fadeOut();
@@ -398,6 +401,7 @@ $(document).ready(function(){
                     $('#collect_data_t2').fadeIn();
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
+                    $("#Tap3_loader_container").fadeOut();
                     
                 });
                 
@@ -428,6 +432,8 @@ $(document).ready(function(){
         $(this).addClass('active');
 
     });
+    
+    
     
 }); 
 // End docmennt ready

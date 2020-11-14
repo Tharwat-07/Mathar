@@ -1,3 +1,31 @@
+/* this code works but it's somehow shitty  */
+
+#Tap3_loader_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.Tap3_loader {
+    background: url("./zloader.gif") no-repeat center center;
+
+    margin: -100px 0 0 0;
+    height: 100%;
+}
+#Tap3_loader_text {
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    margin: -300px 0 0 0;
+    height: 100%;
+}
+
+
+
+
+
 /*-----------------------------------------------------------------------
 01. START APP FONTS
 -----------------------------------------------------------------------*/
@@ -401,6 +429,7 @@ table.dataTable tbody td {
     height: 95%;
     overflow: hidden;
     margin: 10px 10px -50px 10px;
+    background-image: url("paper.gif");
 }
 
 /* The Zooming img tab Two Buttons */
