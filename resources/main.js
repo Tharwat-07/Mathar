@@ -271,9 +271,6 @@ $(document).ready(function(){
 		});
     }).draw();
     
-    
-    
-    
     /* move row between tables */ 
     $(".btn_1").on('click', function() {
 
@@ -319,8 +316,13 @@ $(document).ready(function(){
 
     });
     
-
-
+    async function _openFileLoaction() {
+        await eel.openFileLoaction();
+    };
+    //saveImage Button event
+    $('#saveImage').on('click', function () {
+        _openFileLoaction();
+    });
    
     // IMAGE VIEWER CODE  //
     tileSources = tileSources.map(function(tileSource, i) {
@@ -330,7 +332,6 @@ $(document).ready(function(){
         preload: i === 1 ? true : false
       };
     });
-    
     
     // Img Zooming Plugin
     var viewer = OpenSeadragon({
@@ -386,7 +387,7 @@ $(document).ready(function(){
             
             async function run() {
                 
-                tileSources = await eel.hi(id_per_row, dict)(); 
+                tileSources = await eel.getImages(id_per_row, dict)(); 
                 //console.log("Got this from Python: " + tileSources[0]);
                 //console.log("Got this from Python: " + tileSources[1]);
                 viewer.setVisible(false);
