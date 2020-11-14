@@ -398,7 +398,7 @@ table.dataTable tbody td {
 .zoomer {
     background: #f7f7f8;
     border: 1px solid #dee2e6;
-    height: 525px;
+    height: 95%;
     overflow: hidden;
     margin: 10px 10px -50px 10px;
 }
