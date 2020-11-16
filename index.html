@@ -83,11 +83,16 @@
             START TAB 3 CONTENT
         ==========================-->
         <section id="section3" class="tabbed">
-            <div id='Tap3_loader_container'>
-                <div class="Tap3_loader"></div>
-                <div id='Tap3_loader_text'>إنتظر...جارى التكوين</div>
+
+            <div class="not_yet">
+                <h1>لم يتم تكوين مسائل بعد</h1>
             </div>
             
+            <div id='Tap3_loader_container' style='display: none;'>
+                <div class="Tap3_loader"></div>
+                <h4>إنتظر...جارى التكوين</h4>
+            </div>
+    
             <!-- image-->
             <div class="zoomer"> <!--= container: made to make a backgroud-color  =-->
                 <div id="wheelzoom.exe"></div> <!--= the image container =-->
@@ -95,8 +100,8 @@
             <!-- Buttons -->
             <div class="row">
                 <div class="col-12 text-center">
-                    <button id="saveImage" class="btn_2 icon-file">فتح مكان الحفظ</button>
-                    <button id="ToggleImages" class="btn_2 icon-star-2">أظهر الإجابة</button>
+                    <button id="saveImage" class="btn_2 icon-file" style='display: none;'>فتح مكان الحفظ</button>
+                    <button id="ToggleImages" class="btn_2 icon-star-2" style='display: none;'>أظهر الإجابة</button>
                 </div>
             </div>
         </section>

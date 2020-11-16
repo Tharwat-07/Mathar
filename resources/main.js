@@ -13,6 +13,25 @@ $(document).on("keydown", disableButtonsDown);
 // Disable Right click
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+// Disable some short keys
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
+
 */
 
 
@@ -371,10 +390,12 @@ $(document).ready(function(){
         
         else {
             $("#Tap3_loader_container").fadeIn("slow");
-            $('#collect_data_t2').fadeOut();
-            $('#ToggleImages').fadeOut();
+            $('#collect_data_t2').prop('disabled', true)
             $('#saveImage').fadeOut();
+            $('.not_yet').fadeOut();
             viewer.setVisible(false);
+
+            // start animation 
             
             var id_per_row = empty_table.columns(1).data().toArray()[0];
             var ops_per_row = empty_table.columns(7).data().toArray()[0];
@@ -399,10 +420,12 @@ $(document).ready(function(){
                 viewer.addHandler('tile-loaded', function(){
                     
                     viewer.setVisible(true);
-                    $('#collect_data_t2').fadeIn();
+                    $('#collect_data_t2').prop('disabled', false)
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
                     $("#Tap3_loader_container").fadeOut("slow");
+
+                    // stop animation
                     
                 });
                 
