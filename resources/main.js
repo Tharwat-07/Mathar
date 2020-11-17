@@ -391,6 +391,7 @@ $(document).ready(function(){
         else {
             $("#Tap3_loader_container").fadeIn("slow");
             $('#collect_data_t2').prop('disabled', true)
+            $('#ToggleImages').fadeOut();
             $('#saveImage').fadeOut();
             $('.not_yet').fadeOut();
             viewer.setVisible(false);
