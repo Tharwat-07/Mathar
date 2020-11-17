@@ -403,6 +403,17 @@ table.dataTable tbody td {
     margin: 10px 10px -50px 10px;
 }
 
+/* zoom icons */ 
+.openseadragon-container img[alt="Zoom in"] {
+    margin: 10px 7px 0 10px !important;
+}
+
+.openseadragon-container img[alt="Zoom out"],
+.openseadragon-container img[alt="Go home"],
+.openseadragon-container img[alt="Toggle full page"] {
+    margin: 10px 7px 0 0 !important;
+}
+
 /* txt before result */ 
 .not_yet {
     position: fixed;
@@ -448,7 +459,6 @@ table.dataTable tbody td {
                 transform: rotateZ(360deg);
     }
 }
-
 
 /* The Zooming img tab Two Buttons */
 .btn_2 {
