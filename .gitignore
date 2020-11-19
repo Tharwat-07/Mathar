@@ -1,4 +1,4 @@
-*.db
 /__pycache__
 /*.png
 /output
+Thumbs.db
