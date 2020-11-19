@@ -102,7 +102,7 @@
 
 /* scrollbar */
 ::-webkit-scrollbar-thumb {
-    background-color: #0db379;  
+    background-color: #17cc8e;  
 }
 
 ::-webkit-scrollbar {
@@ -527,115 +527,140 @@ table.dataTable tbody td {
 07. END ZOOMING IMG
 -----------------------------------------------------------------------*/
 
-
 /*-----------------------------------------------------------------------
-08. START SETTING TAB
+08. START SETTING MODAL
 -----------------------------------------------------------------------*/
 
-.setting_wrapper {
-    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-50%);
-    width: 800px;
-    height: auto;
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
+.setting_modal_btn {
+    position: fixed;
+    top: 0px;
+    right: 5px;
+    z-index: 2111;
 }
 
-.df_setting {
-    display: -webkit-box;
-    display: -ms-flexbox;  
-    display: -webkit-flex; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.setting_modal_btn button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    width: 64px;
+    height: 64px;
+    font-size: 25px;
 }
 
-.font_type {
-    display: -webkit-box;
-    display: -ms-flexbox;  
-    display: -webkit-flex; 
-    display: flex;
+/* Modal Style */
+.modal {
+    z-index: 3050;
 }
 
-.a_1 select {
-    width: 250px;
-    height: 40px;
+.modal-header h4 {
+    color: #183a56;
+    font-weight: 600;
+}
+
+.modal-header button {
+    color: #183a56;
+    font-weight: 600;
+}
+
+.modal-header .close {
     padding: 0;
-    padding-left: 5px;
-    border-radius: 0;
+    margin: 0;
+    opacity: 0.9;
 }
 
-.form-control:focus {
-    color: #183a56;
-    background-color: none;
-    border-color: #14c285;
+/* Settings */ 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
     box-shadow: none;
+    border: 0 !important;
+    background: #17cc8e;
+    background-image: none;
 }
 
-.a_2 {
-    margin-left: 193px;
-    padding-top: 10px;
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
 }
 
-.b_2{
-    margin-left: 186px;
-    padding-top: 10px;
+/* Custom Select */
+.select {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 40px;
+    line-height: 3;
+    background: #17cc8e;
+    overflow: hidden;
 }
 
-.c_2 {
-    margin-left: 53px;
-    padding-top: 10px;
+select {
+    flex: 1;
+    line-height: 15px;
+    padding: 0 10px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
 }
 
-input {
-    color: #183a56;
-    border-color: #ced4da;
-    border-style: solid;
-    border-width: 1px;
-}
-
-input:focus {
-    border-color: #14c285;
-}
-
-.font_type,
-.font_size,
-.papper_number,
-.cheack_1,
-.cheack_2,
-.color_peacker_1,
-.color_peacker_2,
-.color_peacker_3,
-.save-btn {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.cheack_1 input,
-.cheack_2 input {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-}
-
-
-.line::after {
-    content: "";
+.select::after {
+    content: '\25BC';
+    height: 100%;
     position: absolute;
-    left: 0;
-    background-color: #ddd;
-    height: 1px;
-    width: 100%;
-    z-index: -1;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgba(0,0,0,0.05);
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    line-height: 40px;
+}
+
+.b_1,
+.paper_num {
+    background: #17cc8e;
+    border: 0;
+    color: #fff;
+    padding: 3px;
+    width: 75px;
+}
+
+::placeholder { 
+    color: #fff;
+    opacity: 1;
+}
+  
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    color: #fff;
+}
+
+.cheack_1 input {
+    width: 18px;
+    height: 18px;
+}
+
+.save_setting {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 700;
+    position: relative;
+    background: #17cc8e;
+    color: #fff;
+    padding: 15px 30px;
 }
 
 /*-----------------------------------------------------------------------
-08. END SETTING TAB 
+08. END SETTING MODAL
 -----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
@@ -663,23 +688,42 @@ input {
   text-align: center
 }
 
-
-
 /*-----------------------------------------------------------------------
   AHMED4CSS exits
 -----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
-    START NOTES
+    START HELPER CLASSES
 -----------------------------------------------------------------------*/
 
-/*
+.mb-30 {
+    margin-bottom: 30px;
+}
 
-Wdith 1340 px 
-height 620 px 
+.pl_fix {
+    padding-left: 5px;
+}
 
-*/
+.pr_fix {
+    padding-right: 5px;
+}
+
+.pl_big_fix {
+    padding-left: 310px;
+}
+
+.pl_fix_2 {
+    padding-left: 278px;
+}
+
+.pl_fix_3 {
+    padding-left: 73px;
+}
+
+.pl_fix_4 {
+    padding-left: 61px;
+}
 
 /*-----------------------------------------------------------------------
-    END NOTES
+    END HELPER CLASSES
 -----------------------------------------------------------------------*/
