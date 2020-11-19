@@ -1,1 +1,4 @@
-Thumbs.db
+*.db
+/__pycache__
+/*.png
+/output
