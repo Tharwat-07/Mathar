@@ -359,6 +359,7 @@ $(document).ready(function(){
         id: "wheelzoom.exe",
         immediateRender: true,
         prefixUrl: './resources/openseadrag/images/', /* icons path */
+        buildPyramid: false
     });
     
     viewer.setVisible(false);
@@ -394,6 +395,7 @@ $(document).ready(function(){
             $('#ToggleImages').fadeOut();
             $('#saveImage').fadeOut();
             $('.not_yet').fadeOut();
+            $('#settings').fadeOut()
             viewer.setVisible(false);
 
             // start animation 
@@ -414,8 +416,6 @@ $(document).ready(function(){
             async function run() {
                 
                 tileSources = await eel.getImages(id_per_row, dict)(); 
-                //console.log("Got this from Python: " + tileSources[0]);
-                //console.log("Got this from Python: " + tileSources[1]);
                 viewer.setVisible(false);
                 
                 viewer.addHandler('tile-loaded', function(){
@@ -425,7 +425,7 @@ $(document).ready(function(){
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
                     $("#Tap3_loader_container").fadeOut("slow");
-
+                    $('#settings').fadeIn();
                     // stop animation
                     
                 });
