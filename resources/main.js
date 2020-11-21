@@ -357,7 +357,7 @@ $(document).ready(function(){
     
     var index = 0;
     $('#ToggleImages').on('click', function () {
-        
+        //
         if (index==1){$(this).text('إخفاء الإجابة')}
         else{$(this).text('إظهار الإجابة')}
         
@@ -426,9 +426,7 @@ $(document).ready(function(){
                 });
                 
                 //remove prev tiles/images and add newer ones. 
-                viewer.world.resetItems();
                 viewer.world.removeAll();
-                console.log(viewer.world.getItemCount());
                 viewer.addTiledImage({
                     tileSource: {url: tileSources[1], type: 'image', buildPyramid: false},
                     index: 0,
