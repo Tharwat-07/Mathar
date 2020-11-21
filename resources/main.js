@@ -142,7 +142,6 @@ $(document).ready(function(){
     
     // INIT vars 
     var ict2 = 1
-    var tileSources = [{type: 'image', url: '' }, {type: 'image', url: '' }]
     // This var for ( Remove Button ) sound click only * H A D A D Y *
     var audio = new Audio("resources/btnclk.wav"); 
 
@@ -344,15 +343,7 @@ $(document).ready(function(){
     $('#saveImage').on('click', function () {
         _openFileLoaction();
     });
-   
-    // IMAGE VIEWER CODE  //
-    tileSources = tileSources.map(function(tileSource, i) {
-      return {
-        tileSource: tileSource,
-        opacity: i === 0 ? 1 : 0,
-        preload: i === 1 ? true : false
-      };
-    });
+       
     
     // Img Zooming Plugin
     var viewer = OpenSeadragon({
@@ -364,16 +355,23 @@ $(document).ready(function(){
     
     viewer.setVisible(false);
     
-    var index = 1;
+    var index = 0;
     $('#ToggleImages').on('click', function () {
-      var oldTiledImage = viewer.world.getItemAt(index);
-      index = (index + 1) % tileSources.length;
-      var nextIndex = (index + 1) % tileSources.length;
-      var newTiledImage = viewer.world.getItemAt(index);
-      var nextTiledImage = viewer.world.getItemAt(nextIndex);
-      oldTiledImage.setOpacity(0);
-      newTiledImage.setOpacity(1);
-      nextTiledImage.setPreload(true);
+        
+        if (index==1){$(this).text('إخفاء الإجابة')}
+        else{$(this).text('إظهار الإجابة')}
+        
+        var oldTiledImage = viewer.world.getItemAt(index);
+
+        index = (index + 1) % 2;
+        var nextIndex = (index + 1) % 2;
+
+        var newTiledImage = viewer.world.getItemAt(index);
+        var nextTiledImage = viewer.world.getItemAt(nextIndex);
+
+        oldTiledImage.setOpacity(0);
+        newTiledImage.setOpacity(1);
+        nextTiledImage.setPreload(true);
     }); 
     // IMAGE VIEWER CODE SEMI-END //
     
@@ -427,16 +425,21 @@ $(document).ready(function(){
                     
                 });
                 
+                //remove prev tiles/images and add newer ones. 
+                viewer.world.resetItems();
+                viewer.world.removeAll();
+                console.log(viewer.world.getItemCount());
                 viewer.addTiledImage({
                     tileSource: {url: tileSources[1], type: 'image', buildPyramid: false},
-                    index: 1,
+                    index: 0,
                   });
                 viewer.addTiledImage({
                     tileSource: {url: tileSources[0], type: 'image', buildPyramid: false},
                     index: 1,
                   });
                 
-                index = 1;
+                index = 1
+               
                                   
             }
 
