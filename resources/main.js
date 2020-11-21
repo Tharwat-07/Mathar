@@ -367,13 +367,10 @@ $(document).ready(function(){
     var index = 1;
     $('#ToggleImages').on('click', function () {
       var oldTiledImage = viewer.world.getItemAt(index);
-
       index = (index + 1) % tileSources.length;
       var nextIndex = (index + 1) % tileSources.length;
-
       var newTiledImage = viewer.world.getItemAt(index);
       var nextTiledImage = viewer.world.getItemAt(nextIndex);
-
       oldTiledImage.setOpacity(0);
       newTiledImage.setOpacity(1);
       nextTiledImage.setPreload(true);
@@ -430,8 +427,15 @@ $(document).ready(function(){
                     
                 });
                 
-                await viewer.open( [{type: 'image', url: tileSources[1] }, {type: 'image', url: tileSources[0] }] ); 
-               
+                viewer.addTiledImage({
+                    tileSource: {url: tileSources[1], type: 'image', buildPyramid: false},
+                    index: 1,
+                  });
+                viewer.addTiledImage({
+                    tileSource: {url: tileSources[0], type: 'image', buildPyramid: false},
+                    index: 1,
+                  });
+                
                 index = 1;
                                   
             }
