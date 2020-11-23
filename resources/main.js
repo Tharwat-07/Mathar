@@ -377,6 +377,9 @@ $(document).ready(function(){
     
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
+        //play sound for this button.
+        //https://www.youtube.com/watch?v=x7bIbVlIqEc
+        audio.play()
         
         if (empty_table.data().count() == 0) {
             swal("يرجي اختيار مسائل اولاً", {
@@ -447,10 +450,9 @@ $(document).ready(function(){
     });
     
     
-    // and this code for all button sound click * H A D A D Y *
-    $("button").on('click', function() {
+    // and this code for all button sound click * H A D A D Y *Ahmed4end:not all, son.
+    $("button:not(#collect_data_t2)").on('click', function() {
                 
-        var audio = new Audio("resources/btnclk.wav");
         audio.play();
 
     });
