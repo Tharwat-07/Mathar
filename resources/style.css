@@ -4,92 +4,92 @@
 
 /* cairo-200 - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 200;
-  src: url('fonts/cairo-v9-arabic-200.eot'); /* IE9 Compat Modes */
-  src: local('Cairo ExtraLight'), local('Cairo-ExtraLight'),
-       url('fonts/cairo-v9-arabic-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-200.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-200.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-200.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-200.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/cairo-v9-arabic-200.eot'); /* IE9 Compat Modes */
+    src: local('Cairo ExtraLight'), local('Cairo-ExtraLight'),
+        url('fonts/cairo-v9-arabic-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-200.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-200.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-200.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-200.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 /* cairo-300 - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 300;
-  src: url('fonts/cairo-v9-arabic-300.eot'); /* IE9 Compat Modes */
-  src: local('Cairo Light'), local('Cairo-Light'),
-       url('fonts/cairo-v9-arabic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-300.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-300.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/cairo-v9-arabic-300.eot'); /* IE9 Compat Modes */
+    src: local('Cairo Light'), local('Cairo-Light'),
+        url('fonts/cairo-v9-arabic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-300.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-300.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-300.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-300.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 /* cairo-regular - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/cairo-v9-arabic-regular.eot'); /* IE9 Compat Modes */
-  src: local('Cairo Regular'), local('Cairo-Regular'),
-       url('fonts/cairo-v9-arabic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-regular.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/cairo-v9-arabic-regular.eot'); /* IE9 Compat Modes */
+    src: local('Cairo Regular'), local('Cairo-Regular'),
+        url('fonts/cairo-v9-arabic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-regular.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-regular.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 /* cairo-600 - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 600;
-  src: url('fonts/cairo-v9-arabic-600.eot'); /* IE9 Compat Modes */
-  src: local('Cairo SemiBold'), local('Cairo-SemiBold'),
-       url('fonts/cairo-v9-arabic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-600.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-600.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/cairo-v9-arabic-600.eot'); /* IE9 Compat Modes */
+    src: local('Cairo SemiBold'), local('Cairo-SemiBold'),
+        url('fonts/cairo-v9-arabic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-600.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-600.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-600.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 /* cairo-700 - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 700;
-  src: url('fonts/cairo-v9-arabic-700.eot'); /* IE9 Compat Modes */
-  src: local('Cairo Bold'), local('Cairo-Bold'),
-       url('fonts/cairo-v9-arabic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-700.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-700.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/cairo-v9-arabic-700.eot'); /* IE9 Compat Modes */
+    src: local('Cairo Bold'), local('Cairo-Bold'),
+        url('fonts/cairo-v9-arabic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-700.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-700.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 /* cairo-900 - arabic */
 @font-face {
-  font-family: 'Cairo';
-  font-style: normal;
-  font-weight: 900;
-  src: url('fonts/cairo-v9-arabic-900.eot'); /* IE9 Compat Modes */
-  src: local('Cairo Black'), local('Cairo-Black'),
-       url('fonts/cairo-v9-arabic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/cairo-v9-arabic-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/cairo-v9-arabic-900.woff') format('woff'), /* Modern Browsers */
-       url('fonts/cairo-v9-arabic-900.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/cairo-v9-arabic-900.svg#Cairo') format('svg'); /* Legacy iOS */
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/cairo-v9-arabic-900.eot'); /* IE9 Compat Modes */
+    src: local('Cairo Black'), local('Cairo-Black'),
+        url('fonts/cairo-v9-arabic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/cairo-v9-arabic-900.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/cairo-v9-arabic-900.woff') format('woff'), /* Modern Browsers */
+        url('fonts/cairo-v9-arabic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/cairo-v9-arabic-900.svg#Cairo') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
-	font-family: 'icomoon';
-	src:url('fonts/icomoon/icomoon.eot');
-	src:url('fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon/icomoon.woff') format('woff'),
-		url('fonts/icomoon/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src:url('fonts/icomoon/icomoon.eot');
+    src:url('fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icomoon/icomoon.woff') format('woff'),
+        url('fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*-----------------------------------------------------------------------
@@ -97,7 +97,7 @@
 -----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
-  02. START GENERAL STYLES
+02. START GENERAL STYLES
 -----------------------------------------------------------------------*/
 
 /* scrollbar */
@@ -112,24 +112,24 @@
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
-  background-color: #fcfefd;
-  color: #183a56;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  margin-top: 63px;
+    font-family: 'Cairo', sans-serif;
+    background-color: #fcfefd;
+    color: #183a56;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-top: 63px;
 }
 
 a {
-  color: #fff;
+    color: #fff;
 }
 
 a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 *:focus {
@@ -235,11 +235,11 @@ th {
 /* select&remove button style */
 .icon-plus:before,
 .icon-plus:after {
-	content: "\e011";
+    content: "\e011";
 }
 
 .icon-remove:before {
-	content: "\e00f";
+    content: "\e00f";
 }
 
 .btn_1.icon-remove:before {
@@ -247,24 +247,24 @@ th {
 }
 
 .btn_1:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn_1:before,
 .icon-plus:after,
 .btn_2:before {
     font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -273,66 +273,66 @@ th {
 }
 
 .btn_1 {
-	border: none;
-	cursor: pointer;
-	padding: 7.5px 15px;
-	display: inline-block;
-	font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 7.5px 15px;
+    display: inline-block;
+    font-weight: 700;
     position: relative;
     background: #17cc8e;
-	color: #fff;
-	font-size: 12px;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn_1:active {
-	background: #17cc8e;
-	top: 2px;
+    background: #17cc8e;
+    top: 2px;
 }
 
 .btn_1 span {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	-webkit-transition: all 0.3s;
-	-webkit-backface-visibility: hidden;
-	-moz-transition: all 0.3s;
-	-moz-backface-visibility: hidden;
-	transition: all 0.3s;
-	backface-visibility: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: all 0.3s;
+    -moz-backface-visibility: hidden;
+    transition: all 0.3s;
+    backface-visibility: hidden;
 }
 
 .btn_1:before {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	line-height: 40px;
-	font-size: 100%;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn_1:hover span {
-	-webkit-transform: translateY(300%);
-	-moz-transform: translateY(300%);
-	-ms-transform: translateY(300%);
-	transform: translateY(300%);
+    -webkit-transform: translateY(300%);
+    -moz-transform: translateY(300%);
+    -ms-transform: translateY(300%);
+    transform: translateY(300%);
 }
 
 .btn_1:before {
-	left: 0;
-	top: -100%;
+    left: 0;
+    top: -100%;
 }
 
 .btn_1:hover:before {
-	top: 0;
+    top: 0;
 }
 
 /* table body style */
@@ -443,84 +443,84 @@ table.dataTable tbody td {
     border: 5px solid #183a563f;
     border-top: 5px solid #0db379;
     -webkit-animation: spinner 1s infinite linear;
-                animation: spinner 1s infinite linear;
+    animation: spinner 1s infinite linear;
 }
 
 @-webkit-keyframes spinner {
     to {
-      -webkit-transform: rotateZ(360deg);
-                transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     }
 }
-  
+
 @keyframes spinner {
     to {
-      -webkit-transform: rotateZ(360deg);
-                transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     }
 }
 
 /* The Zooming img tab Two Buttons */
 .btn_2 {
-	border: none;
-	cursor: pointer;
-	display: inline-block;
-	margin-left: 20px;
-	font-weight: 700;
-	position: relative;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 700;
+    position: relative;
     background: #17cc8e;
     color: #fff;
     padding: 20px 40px 20px 100px;
     -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
+    -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .btn_2:hover {
-	background: #14c285;
+    background: #14c285;
 }
 
 .btn_2:active {
-	background: #0db379;
-	top: 1px;
+    background: #0db379;
+    top: 1px;
 }
 
 .btn_2:before {
-	position: absolute;
-	height: 100%;
-	left: 0;
-	top: 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
     line-height: 3.1;
     font-size: 120%;
-	width: 60px;
+    width: 60px;
 }
 
 .btn_2:before {
-	background: rgba(0,0,0,0.05);
+    background: rgba(0,0,0,0.05);
 }
 
 .icon-star-2:before {
-	content: "\e00c";
+    content: "\e00c";
 }
 
 .icon-file:before {
     content: "\e004";
-	font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
 }
 
 .icon-cog:before {
     content: "\e010";
-	font-family: 'icomoon';
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
 }
 
 /*-----------------------------------------------------------------------
@@ -569,85 +569,159 @@ table.dataTable tbody td {
 }
 
 /* Settings */ 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background: #17cc8e;
-    background-image: none;
+
+/* div:: herzontial line logged in */
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: lightgrey;
 }
 
-/* Remove IE arrow */
-select::-ms-expand {
-    display: none;
-}
+/* div:: herzontial line logged out */
 
-/* Custom Select */
-.select {
-    position: relative;
+/* container logged in */
+
+.container {
+    display: -webkit-box;
     display: flex;
-    width: 300px;
-    height: 40px;
-    line-height: 3;
-    background: #17cc8e;
-    overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
 }
 
-select {
+.grid {
+    -webkit-box-flex: 1;
     flex: 1;
-    line-height: 15px;
-    padding: 0 10px;
-    color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+@media screen and (max-width: 900px) {
+    .grid {
+        max-width: 100%;
+    }
+}
+
+/* container logged out */
+
+/* input:: checkbox logged in */
+
+.toggle {
+    max-width: 100%;
+    height: 40px;
+    background: #17cc8e;
+    border-radius: 999px;
+    position: relative;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
     cursor: pointer;
+
+}
+.toggle__handle {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 50%;
+    right: calc(100% - 36px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 50%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.toggle.is-on {
+    background: lightgrey;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.toggle.is-on .toggle__handle {
+    right: 4px;
+    background: white;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+/* ON/OFF text */
+#chkbxt {
+    color: #183a56;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+/* input:: checkbox logged out */
+
+.form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-item__control {
+    width: 40%;
     text-align: right;
 }
 
-.select::after {
-    content: '\25BC';
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    background: rgba(0,0,0,0.05);
-    color: #fff;
-    cursor: pointer;
-    pointer-events: none;
-    line-height: 40px;
+.control, input.settingsInput {
+    height: 40px;
+    text-align: center;
+    background: white;
+    color: inherit;
+    display: block;
+    width: 100%;
+    padding: 0px;
+    border-radius: .3rem;
+    border: 1px solid darkgrey;
+}
+.control:hover, .control:focus {
+    /* held for future */
 }
 
-.b_1,
-.paper_num {
-    background: #17cc8e;
+/* input:: color picker logged in */
+
+input.settingsInput[type="color"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 40px;
     border: 0;
-    color: #fff;
-    padding: 3px;
-    width: 75px;
+    border-radius: .3rem;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+}
+input.settingsInput[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input.settingsInput[type="color"]::-webkit-color-swatch {
+    border: none;
 }
 
-::placeholder { 
-    color: #fff;
-    opacity: 1;
-}
-  
-:-ms-input-placeholder {
-    color: #fff;
+/* input:: color picker logged out */
+
+h3 {
+    margin: 10px 0 10px;
+    text-align:right;
+
 }
 
-::-ms-input-placeholder {
-    color: #fff;
-}
-
-.cheack_1 input {
-    width: 18px;
-    height: 18px;
+select {
+    text-align: center;
+    text-align-last: center;
 }
 
 .save_setting {
+    text-align: center;
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -656,9 +730,30 @@ select {
     position: relative;
     background: #17cc8e;
     color: #fff;
-    padding: 15px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height:40px;
+    border-radius: .3rem;
 }
 
+/* center save button */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* rotate settings icon  when hover */
+#settings:hover {
+    animation-name: rotate; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
 /*-----------------------------------------------------------------------
 08. END SETTING MODAL
 -----------------------------------------------------------------------*/
@@ -677,7 +772,7 @@ select {
 -----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
-  AHMED4CSS entered
+AHMED4CSS entered
 -----------------------------------------------------------------------*/
 /* table options stuff */
 .settings input  { 
@@ -685,15 +780,15 @@ select {
 }
 
 input {
-  text-align: center
+    text-align: center
 }
 
 /*-----------------------------------------------------------------------
-  AHMED4CSS exits
+AHMED4CSS exits
 -----------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
-    START HELPER CLASSES
+START HELPER CLASSES
 -----------------------------------------------------------------------*/
 
 .mb-30 {
@@ -725,5 +820,5 @@ input {
 }
 
 /*-----------------------------------------------------------------------
-    END HELPER CLASSES
+END HELPER CLASSES
 -----------------------------------------------------------------------*/

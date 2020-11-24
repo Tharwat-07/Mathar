@@ -9,8 +9,8 @@
         <title>Mathar</title>
 
         <!--==========================
-            START CSS FILES
-        ==========================-->
+START CSS FILES
+==========================-->
         <!-- happiness Lib -->
         <link play='https://www.youtube.com/watch?v=0Gkhol2Q1og' style='loop: true;'>
         <!-- Bootstrap Lib -->
@@ -23,23 +23,23 @@
         <link rel="stylesheet" href="./resources/style.css">
 
         <!--==========================
-            END CSS FILES
-        ==========================-->
+END CSS FILES
+==========================-->
 
     </head>
     <body>
-        
-        <!--==========================
-            START PRELOADER
-        ==========================-->
-        <div class="se-pre-con"></div>
-        <!--==========================
-            END PRELOADER
-        ==========================-->
 
         <!--==========================
-            START TABS
-        ==========================-->
+START PRELOADER
+==========================-->
+        <div class="se-pre-con"></div>
+        <!--==========================
+END PRELOADER
+==========================-->
+
+        <!--==========================
+START TABS
+==========================-->
         <ul class="nav fixed-top justify-content-center" data-tabs>
             <li class="nav-item"><a class="nav-link active" data-tabby-default href="#section1">جدول المسائل</a></li>
             <li class="nav-item"><a class="nav-link" href="#section2">جدول المختارات</a></li>
@@ -47,12 +47,12 @@
             <li class="nav-item"><a class="nav-link" href="#section4">عن البرنامج</a></li>
         </ul>
         <!--==========================
-            END TABS
-        ==========================-->
+END TABS
+==========================-->
 
         <!--==========================
-            START SETTING MODAL
-        ==========================-->
+START SETTING MODAL
+==========================-->
         <div id='settings' class="setting_modal_btn">
             <button href="#" class="icon-cog" data-toggle="modal" data-target="#basicModal"></button>
         </div>
@@ -64,84 +64,84 @@
                         <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">الأعدادات</h4>
+                        <h4 class="modal-title" id="myModalLabel">الإعدادات</h4>
                     </div>
                     <div class="modal-body">
-                        <!-- Font Type -->
-                        <div class="row mb-30">
-                            <div class="col-10">
-                                <div class="select">
-                                    <select name="slct" id="slct">
-                                    <option selected>font1</option>
-                                    <option value="1">font2</option>
-                                    <option value="2">font3</option>
-                                    <option value="3">font4</option>
-                                    </select>
+                        <div class="wrapper">
+                            <div class="container">
+
+                                <div class="grid">
+                                    <h3>عام</h3>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <select class="control control--select">
+                                                <option selected="selected">Bahij Yakout</option>
+                                                <option>Arial</option>
+                                                <option>Diwan</option>
+                                                <option>Traditional</option>
+                                            </select>
+                                        </div>
+                                        <label class="form-item__label">:نوع الـخط</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <input class='settingsInput' type="number" min="40" max="100" value="70" required="">
+                                        </div>
+                                        <label class="form-item__label">:حجم الخط</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <input class='settingsInput' type="number" min="1" max="250" value="1" required="">
+                                        </div>
+                                        <label class="form-item__label">:عدد الأوراق</label>
+                                    </div>
+                                    <div class='line'></div>  
+                                    <div class="form-item">
+                                        <div class="form-item__control toggle">
+                                            <div class="toggle__handle"></div>
+                                            <div id='chkbxt'>مفعل</div>
+                                        </div>
+                                        <label class="form-item__label">:ترتيب عشوائى</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control toggle">
+                                            <div class="toggle__handle"></div>
+                                            <div id='chkbxt'>مفعل</div>
+                                        </div>
+                                        <label class="form-item__label">:وضـع المـطـور</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <h3>الآلوان</h3>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <input class='settingsInput' type="color" id="favcolor" name="favcolor" value="#000000">
+                                        </div>
+                                        <label class="form-item__label">:لون رئيسى</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <input class='settingsInput' type="color" id="favcolor" name="favcolor" value="#000000">
+                                        </div>
+                                        <label class="form-item__label">:لون ثانوى</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div class="form-item">
+                                        <div class="form-item__control">
+                                            <input class='settingsInput' type="color" id="favcolor" name="favcolor" value="#000000">
+                                        </div>
+                                        <label class="form-item__label">:لون هامشى</label>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-2 pr-0 pl-0">
-                                <label class="a_2 col-form-label pl_fix"><span >: نوع الخط</span></label>
-                            </div>
                         </div>
-                        <!-- Font Size -->
-                        <div class="row mb-30">
-                            <div class="col-10">
-                                <input class="b_1" type="number" min="40" max="100" placeholder="70" required>
-                            </div>
-                            <div class="col-2 pl-0 pr-0">
-                                <label class="b_2 col-form-label">: حجم الخط</label>
-                            </div>
-                        </div>
-                        <!-- Papper Number -->
-                        <div class="row mb-30">
-                            <div class="col-7">
-                                <input class="paper_num" type="number" min="1" max="500" placeholder="1" required>
-                            </div>
-                            <div class="col-5 pl-0 pr-0">
-                                <label class="c_2 col-form-label pr_fix">: عدد الأوراق المطلوب تكوينها</label>
-                            </div>
-                        </div>
-                        <!-- random cheakbox -->
-                        <div class="row mb-30">
-                            <div class="col-8">
-                                <div class="cheack_1 pl_big_fix">
-                                    <input class="d_1 form-check-input position-static" type="checkbox" id="blankCheckbox">
-                                </div>
-                            </div>
-                            <div class="col-4 pl-0 pr-0">
-                                <label class="d_2">: ترتيب عشوائي للمسائل</label>
-                            </div>
-                        </div>
-                        <!-- Colors-->
-                        <div class="row">
-                            <!-- Color 1 -->
-                            <div class="col-8 pl_fix_2">
-                                <div class="color_peacker_1 mb-30">
-                                    <input type="color" id="favcolor" name="favcolor" value="#000000">
-                                </div>
-                            </div>
-                            <div class="col-4 pr-0">
-                                <label>: لون العناوين الرئيسية</label>
-                            </div>
-                            <!-- Color 2 -->
-                            <div class="col-8 pl_fix_2">
-                                <div class="color_peacker_2 mb-30">
-                                    <input type="color" id="favcolor" name="favcolor" value="#000000">
-                                </div>
-                            </div>
-                            <div class="col-4 pr-0 pl_fix_3">
-                                <label>: لون المسائل</label>
-                            </div>
-                            <!-- Color 3 -->
-                            <div class="col-8 pl_fix_2">
-                                <div class="color_peacker_3 ">
-                                    <input type="color" id="favcolor" name="favcolor" value="#000000">
-                                </div>
-                            </div>
-                            <div class="col-4 pr-0 pl_fix_4">
-                                <label>: لون المعادلات</label>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button class="save_setting">حفظ الإعدادات</button>
@@ -150,24 +150,24 @@
             </div>
         </div>
         <!--==========================
-            END SETTING MODAL
-        ==========================-->
+END SETTING MODAL
+==========================-->
 
         <!--==========================
-            START TAB 1 CONTENT
-        ==========================-->
+START TAB 1 CONTENT
+==========================-->
         <section id="section1" class="tabbed tabbed_default">
             <table id="full_table" class="display table table-bordered" style="width:100%">
 
             </table>
         </section>
         <!--==========================
-            END TAB 1 CONTENT
-        ==========================-->
+END TAB 1 CONTENT
+==========================-->
 
         <!--==========================
-            START TAB 2 CONTENT
-        ==========================-->
+START TAB 2 CONTENT
+==========================-->
         <section id="section2" class="tabbed">
             <div class="row">
                 <div class="col-12 text-center">
@@ -179,23 +179,23 @@
             </table>  
         </section>
         <!--==========================
-            END TAB 2 CONTENT
-        ==========================-->
+END TAB 2 CONTENT
+==========================-->
 
         <!--==========================
-            START TAB 3 CONTENT
-        ==========================-->
+START TAB 3 CONTENT
+==========================-->
         <section id="section3" class="tabbed">
 
             <div class="not_yet">
                 <h1>لم يتم تكوين مسائل بعد</h1>
             </div>
-            
+
             <div id='Tap3_loader_container' style='display: none;'>
                 <div class="Tap3_loader"></div>
                 <h4>إنتظر...جارى التكوين</h4>
             </div>
-    
+
             <!-- image-->
             <div class="zoomer"> <!--= container: made to make a backgroud-color  =-->
                 <div id="wheelzoom.exe"></div> <!--= the image container =-->
@@ -209,22 +209,22 @@
             </div>
         </section>
         <!--==========================
-            END TAB 3 CONTENT
-        ==========================-->
+END TAB 3 CONTENT
+==========================-->
 
         <!--==========================
-            START TAB 4 CONTENT
-        ==========================-->
+START TAB 4 CONTENT
+==========================-->
         <section id="section4" class="tabbed">
 
         </section>
         <!--==========================
-            END TAB 4 CONTENT
-        ==========================-->
+END TAB 4 CONTENT
+==========================-->
 
         <!--==========================
-            START JS SCRIPTS
-        ==========================-->
+START JS SCRIPTS
+==========================-->
         <!-- JS&Python ACCESS - [[RadioActive]]/[[DON'T REMOVE]] -->
         <script type="text/javascript" src="./eel.js"></script>
         <!-- jQuery Lib -->
@@ -245,10 +245,10 @@
         <script src="./resources/backend.js"></script>
         <!-- Sweet Alert -->
         <script src="resources/sweetalert.js"></script>
-        
+
         <!--==========================
-            END JS SCRIPTS
-        ==========================-->
-                
+END JS SCRIPTS
+==========================-->
+
     </body>
 </html>
