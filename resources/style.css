@@ -707,6 +707,9 @@ input.settingsInput[type="color"]::-webkit-color-swatch {
     border: none;
 }
 
+.parentCP {
+    border-radius: .3rem;
+}
 /* input:: color picker logged out */
 
 h3 {
