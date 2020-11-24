@@ -15,13 +15,13 @@ body {
 
 h1 {
     width:100%;
-  margin: 0;
- direction: rtl;
+    margin: 0;
+    direction: rtl;
 
 }
 
 h3 {
-  margin: 4rem 0 3rem;
+    margin: 4rem 0 3rem;
     direction: rtl;
 
 }
@@ -38,9 +38,7 @@ h3 {
 
 /* container logged in */
 
-.wrapper {
-  margin: 4.5rem 1rem 0;
-}
+
 
 .container {
   display: -webkit-box;
@@ -107,6 +105,14 @@ h3 {
   transition: all 300ms ease;
 }
 
+/* ON/OFF text */
+#chkbxt {
+    color: #183a56;
+    position: relative;
+    text-align: center;
+    top: 5px;
+}
+
 /* input:: checkbox logged out */
 
 .form-item {
@@ -170,11 +176,11 @@ input[type="color"]::-webkit-color-swatch {
 /* option:: combobox logged in */
 
 /* center text */
+
 select {
   text-align: center;
   text-align-last: center;
 }
 
 /* option:: combobox logged out */
-
 

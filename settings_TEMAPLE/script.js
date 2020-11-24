@@ -12,9 +12,11 @@ $('.toggle').on('click', function(){
     className = $(this).attr('class');
     if (className.slice(-2,)=='on'){
         console.log('off')
+        $(this).parent().find('#chkbxt').text('غير مفعل');
     }
     else {
-        console.log('on')
+        console.log('on');
+        $(this).parent().find('#chkbxt').text('مفعل');
     }
 });
 
