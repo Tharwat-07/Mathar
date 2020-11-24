@@ -195,5 +195,10 @@ p {
   border-color: transparent;
 }
 
+/* you lied to my, bitch. */
+select {
+  text-align: center;
+  text-align-last: center;
+}
 
 
