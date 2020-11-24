@@ -1,106 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>FUCK HTML&CSS&JS - Settings panel.</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>FUCK HTML&CSS&JS - Settings panel.</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-</head>
-<body>
-<!-- ON: https://www.youtube.com/watch?v=R_TbF5m5KpU -->
-<div class="wrapper">
-  <div class="card">
-    <div class="card__header">
-      <div class="toolbar">
-        <div class="toolbar__item toolbar__item--close"></div>
-        <div class="toolbar__item toolbar__item--min"></div>
-        <div class="toolbar__item toolbar__item--max"></div>
-      </div><a href="#">×</a>
-    </div>
-      
-    <div class="card__body">
-      <div class="container">
-        <div class="grid">
-          <h1>الإعدادات</h1>
+    </head>
+    <body>
+        <!-- ON: https://www.youtube.com/watch?v=R_TbF5m5KpU -->
+        <div class="wrapper">
+            <div class="container">
+                <h1>الإعدادات</h1>
+                <div class="grid">
+                    <h3>عام</h3>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <select class="control control--select">
+                                <option selected="selected">Default</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                        <label class="form-item__label">:نوع الخط</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <input type="number" min="40" max="100" value="70" required="">
+                        </div>
+                        <label class="form-item__label">:حجم الخط</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <input type="number" min="1" max="250" value="1" required="">
+                        </div>
+                        <label class="form-item__label">:عدد الأوراق</label>
+                    </div>
+                    <div class='line'></div>  
+                    <div class="form-item">
+                        <div class="form-item__control toggle">
+                            <div class="toggle__handle"></div>
+                        </div>
+                        <label class="form-item__label">:ترتيب عشوائى</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control toggle">
+                            <div class="toggle__handle"></div>
+                        </div>
+                        <label class="form-item__label">:وضع المطور</label>
+                    </div>
+                    <div class='line'></div>
+                    <h3>الآلوان</h3>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <input type="color" id="favcolor" name="favcolor" value="#000000">
+                        </div>
+                        <label class="form-item__label">:لون رئيسى</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <input type="color" id="favcolor" name="favcolor" value="#000000">
+                        </div>
+                        <label class="form-item__label">:لون ثانوى</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="form-item">
+                        <div class="form-item__control">
+                            <input type="color" id="favcolor" name="favcolor" value="#000000">
+                        </div>
+                        <label class="form-item__label">:لون هامشى</label>
+                    </div>
+                    <div class='line'></div>
+                    <div class="saveBtn">
+                        <button>حفظ الإعدادات</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-        
-        
-        
-      <div class="container">
-        <div class="grid">
-          <h3>عام</h3>
-            
-          <div class="form-item">
-            <div class="form-item__control">
-              <select class="control control--select">
-                <option selected="selected">Default</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-              </select>
-            </div>
-            <label class="form-item__label">:نوع الخط</label>
-          </div>
-          
-          <div class="form-item">
-            <div class="form-item__control">
-              <input type="number" min="40" max="100" value="70" required="">
-            </div>
-            <label class="form-item__label">:حجم الخط</label>
-          </div>
-          
-          <div class="form-item">
-            <div class="form-item__control">
-              <input type="number" min="1" max="250" value="1" required="">
-            </div>
-            <label class="form-item__label">:عدد الأوراق</label>
-          </div>
-            
-          <div class="form-item">
-            <div class="form-item__control toggle">
-              <div class="toggle__handle"></div>
-            </div>
-              
-            <label class="form-item__label">:ترتيب عشوائى</label>
-          </div>
-          
-          <div class="form-item">
-            <div class="form-item__control toggle">
-              <div class="toggle__handle"></div>
-            </div>
-            <label class="form-item__label">:وضع المطور</label>
-          </div>
-          <h3>الآلوان</h3>
-          <div class="form-item">
-            <div class="form-item__control">
-              <input type="color" id="favcolor" name="favcolor" value="#000000">
-            </div>
-            <label class="form-item__label">:لون رئيسى</label>
-          </div>
-          
-            <div class="form-item">
-            <div class="form-item__control">
-              <input type="color" id="favcolor" name="favcolor" value="#000000">
-            </div>
-            <label class="form-item__label">:لون ثانوى</label>
-          </div>
-          
-            <div class="form-item">
-            <div class="form-item__control">
-              <input type="color" id="favcolor" name="favcolor" value="#000000">
-            </div>
-            <label class="form-item__label">:لون لون هامشى</label>
-          </div>
-            <button>حفظ الإعدادات</button>
-          </div>
-          
-        
-<!-- partial -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script  src="./script.js"></script>
+        <!-- partial -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-</body>
+        <script  src="./script.js"></script>
+
+    </body>
+    <footer>
+        <p><small>Designed and inspired by ZBY.mp4</small></p>
+    </footer>
 </html>

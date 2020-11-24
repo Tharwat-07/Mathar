@@ -18,9 +18,3 @@ $('.toggle').on('click', function(){
     }
 });
 
-
-
-// Credits
-const credits = document.createElement('footer');
-credits.innerHTML = '<p><small>Designed and inspired by ZBY</small></p>';
-document.body.appendChild(credits);
