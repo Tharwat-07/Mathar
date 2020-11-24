@@ -18,3 +18,7 @@ $('.toggle').on('click', function(){
     }
 });
 
+
+$(document).on('change', 'input[type=color]', function() {
+  this.parentNode.style.backgroundColor = this.value;
+});

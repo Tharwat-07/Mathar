@@ -13,7 +13,6 @@ body {
   text-shadow: 0px 1px 1px #17cc8e;
 }
 
-
 h1 {
     width:100%;
   margin: 0;
@@ -27,10 +26,7 @@ h3 {
 
 }
 
-p {
-  margin-bottom: 2rem;
-}
-
+/* div:: herzontial line logged in */
 
 .line {
     width: 100%;
@@ -38,66 +34,12 @@ p {
     background: lightgrey;
 }
 
+/* div:: herzontial line logged out */
+
+/* container logged in */
+
 .wrapper {
   margin: 4.5rem 1rem 0;
-}
-
-.card {
-  display: block;
-  width: 100%;
-  margin: auto;
-  max-width: 1200px;
-  background: white;
-  color: black;
-  border-radius: .8rem;
-  margin-bottom: 2rem;
-}
-.card__header {
-  padding: 2rem;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-}
-.card__body {
-  padding: 5rem 7rem 7rem;
-}
-@media screen and (max-width: 900px) {
-  .card__body {
-    padding: 5rem 2rem 7rem;
-  }
-}
-
-.toolbar__item {
-  box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-.toolbar__item:not(:last-of-type) {
-  margin-right: .5rem;
-}
-.toolbar__item:hover, .toolbar__item:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.1);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-.toolbar__item--close {
-  background: #EA6759;
-}
-.toolbar__item--min {
-  background: #FFCC00;
-}
-.toolbar__item--max {
-  background: #2DCC72;
 }
 
 .container {
@@ -110,13 +52,6 @@ p {
           flex-direction: row;
   -webkit-box-pack: justify;
           justify-content: space-between;
-}
-@media screen and (max-width: 900px) {
-  .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-  }
 }
 
 .grid {
@@ -132,10 +67,13 @@ p {
   }
 }
 
+/* container logged out */
+
+/* input:: checkbox logged in */
 
 .toggle {
-  max-width: 62px;
-  height: 32px;
+  max-width: 100%;
+  height: 40px;
   background: #17cc8e;
   border-radius: 999px;
   position: relative;
@@ -145,11 +83,11 @@ p {
     
 }
 .toggle__handle {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   position: absolute;
   top: 50%;
-  left: 4px;
+  right: calc(100% - 36px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: white;
@@ -163,11 +101,13 @@ p {
   transition: all 300ms ease;
 }
 .toggle.is-on .toggle__handle {
-  left: 34px;
+  right: 4px;
   background: white;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+
+/* input:: checkbox logged out */
 
 .form-item {
   margin-top: 20px;
@@ -186,7 +126,7 @@ p {
 }
 
 .control, input {
-  height: 35px;
+  height: 40px;
   text-align: center;
   background: white;
   color: inherit;
@@ -201,22 +141,40 @@ p {
   border-color: transparent;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
-    -webkit-appearance: none;
-    rder-radius: 0px;
-    border: none;
-	padding: 0;
+/* input:: color picker logged in */
+
+input[type="color"] {
+   -webkit-appearance: none;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: .3rem;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
 }
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+/* input:: color picker logged out */
 
 .saveBtn {
     text-align: center;
     margin-top: 30px;
 }
 
-/* you lied to my, bitch. */
+/* option:: combobox logged in */
+
+/* center text */
 select {
   text-align: center;
   text-align-last: center;
 }
+
+/* option:: combobox logged out */
 
 
