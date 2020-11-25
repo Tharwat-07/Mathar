@@ -476,8 +476,8 @@ table.dataTable tbody td {
     transition: all 0.3s;
 }
 
-.btn_2:hover {
-    background: #14c285;
+.btn_2:disabled {
+    background: lightgrey;
 }
 
 .btn_2:active {
