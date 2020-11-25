@@ -384,6 +384,8 @@ $(document).ready(function(){
         } 
 
         else {
+            ohSnap('جارى التكوين .. إذهب لنافذة المعاينة', {color: 'blue'});
+            
             $("#Tap3_loader_container").fadeIn("slow");
             $('#collect_data_t2').prop('disabled', true)
             $('#ToggleImages').fadeOut();
@@ -420,6 +422,8 @@ $(document).ready(function(){
                     $('#saveImage').fadeIn();
                     $("#Tap3_loader_container").fadeOut("slow");
                     $('#settings').fadeIn();
+                    
+                    ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
                     // stop animation
 
                 });

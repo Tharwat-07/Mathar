@@ -1,8 +1,3 @@
-/* disable text selection*/
-* {
-    user-select: none;
-}
-
 /*-----------------------------------------------------------------------
 01. START APP FONTS
 -----------------------------------------------------------------------*/
@@ -790,6 +785,91 @@ AHMED4CSS entered
 
 input {
     text-align: center
+}
+
+/* disable text selection*/
+* {
+    user-select: none;
+}
+
+
+/*-----------------------------------------------------------------------
+AHMED4CSS exits
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+Ohsnap entered
+-----------------------------------------------------------------------*/
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #eed3d7;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0px;
+  right: 21px;
+  /* Each alert has its own width */
+  float: right;
+  clear: right;
+  background-color: white;
+}
+
+.alert-red {
+  color: white;
+  background-color: #DA4453;
+}
+.alert-green {
+  color: white;
+  background-color: #17cc8e;
+}
+.alert-blue {
+  color: white;
+  background-color: #183a56;
+}
+.alert-grey {
+  color: white;
+  background-color: lightgrey;
+}
+.alert-orange {
+  color:white;
+  background-color: #E9573F;
+}
+
+/*-----------------------------------------------------------------------
+Ohsnap exits
+-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------
+START HELPER CLASSES
+-----------------------------------------------------------------------*/
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.pl_fix {
+    padding-left: 5px;
+}
+
+.pr_fix {
+    padding-right: 5px;
+}
+
+.pl_big_fix {
+    padding-left: 310px;
+}
+
+.pl_fix_2 {
+    padding-left: 278px;
+}
+
+.pl_fix_3 {
+    padding-left: 73px;
+}
+
+.pl_fix_4 {
+    padding-left: 61px;
 }
 
 /*-----------------------------------------------------------------------
