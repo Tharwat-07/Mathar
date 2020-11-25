@@ -1,3 +1,8 @@
+/* disable text selection*/
+* {
+    user-select: none;
+}
+
 /*-----------------------------------------------------------------------
 01. START APP FONTS
 -----------------------------------------------------------------------*/
@@ -704,7 +709,7 @@ input.settingsInput[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 input.settingsInput[type="color"]::-webkit-color-swatch {
-    border: none;
+    border: 1px solid darkgrey;
 }
 
 .parentCP {
@@ -746,6 +751,7 @@ select {
 }
 
 /* rotate settings icon  when hover */
+
 #settings:hover {
     animation-name: rotate; 
     animation-duration: 3s; 

@@ -367,7 +367,7 @@ $(document).ready(function(){
 
         oldTiledImage.setOpacity(0);
         newTiledImage.setOpacity(1);
-        nextTiledImage.setPreload(true);
+        //nextTiledImage.setPreload(true);
     }); 
     // IMAGE VIEWER CODE SEMI-END //
 
@@ -427,11 +427,11 @@ $(document).ready(function(){
                 //remove prev tiles/images and add newer ones. 
                 viewer.world.removeAll();
                 viewer.addTiledImage({
-                    tileSource: {url: tileSources[1], type: 'image', buildPyramid: false},
+                    tileSource: {url: tileSources[1], type: 'image', buildPyramid: true, useCanvas:false},
                     index: 0,
                 });
                 viewer.addTiledImage({
-                    tileSource: {url: tileSources[0], type: 'image', buildPyramid: false},
+                    tileSource: {url: tileSources[0], type: 'image', buildPyramid: true, useCanvas:false},
                     index: 1,
                 });
 
