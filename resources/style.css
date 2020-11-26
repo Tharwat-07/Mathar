@@ -270,6 +270,7 @@ th {
 
 .btn_1:hover {
     color: #fff;
+    background: #09d991;
 }
 
 .btn_1 {
@@ -289,6 +290,7 @@ th {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    border-radius: .3rem;
 }
 
 .btn_1:active {
@@ -474,6 +476,7 @@ table.dataTable tbody td {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    border-radius: .3rem
 }
 
 .btn_2:disabled {
@@ -495,6 +498,9 @@ table.dataTable tbody td {
     width: 60px;
 }
 
+.btn_2:hover {
+    background: #09d991;
+}
 .btn_2:before {
     background: rgba(0,0,0,0.05);
 }
@@ -739,6 +745,9 @@ select {
     border-radius: .3rem;
 }
 
+.save_setting:hover {
+    background: #09d991;
+}
 /* center save button */
 .modal-footer {
     display: flex;
