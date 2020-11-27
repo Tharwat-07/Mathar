@@ -420,7 +420,7 @@ $(document).ready(function(){
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
                     $("#Tap3_loader_container").fadeOut("slow");
-
+                    
                     ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
                     // stop animation
 
@@ -511,13 +511,13 @@ $(document).ready(function(){
         className = $(this).attr('class');
         if (className.slice(-2,)=='on'){
             console.log('off')
-            $(this).parent().find('#chkbxt').text('مفعل');
-            $('#watermark_op').fadeIn();
+            $(this).parent().find('#chkbxt').text('غير مفعل');
+            $('#watermark_op').fadeOut();
         }
         else {
             console.log('on');
-            $(this).parent().find('#chkbxt').text('غير مفعل');
-            $('#watermark_op').fadeOut();
+            $(this).parent().find('#chkbxt').text('مفعل');
+            $('#watermark_op').fadeIn();
         }
     });
 
