@@ -47,7 +47,7 @@ $(window).load(function() {
 
 /* dataSet custom variables to make me write less stuff when adding data to table :D */ // bandtio say OMG
 var choose_row_btn = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
-function image(image){return "<img class='img' src='./images/"+image+".png' alt='img'>"};
+function image(image){return "<div class='imgc'><img class='img' src='./images/"+image+".png' alt='img'></div>"};
 
 function text(txt){return `<div id="textCell">${txt}</div>`;};
 /* -------------------------------------------------------------------------------- */
@@ -385,13 +385,12 @@ $(document).ready(function(){
 
         else {
             ohSnap('جارى التكوين .. إذهب لنافذة المعاينة', {color: 'blue'});
-            
+
             $("#Tap3_loader_container").fadeIn("slow");
             $('#collect_data_t2').prop('disabled', true)
             $('#ToggleImages').fadeOut();
             $('#saveImage').fadeOut();
             $('.not_yet').fadeOut();
-            $('#settings').fadeOut()
             viewer.setVisible(false);
 
             // start animation 
@@ -421,8 +420,7 @@ $(document).ready(function(){
                     $('#ToggleImages').fadeIn();
                     $('#saveImage').fadeIn();
                     $("#Tap3_loader_container").fadeOut("slow");
-                    $('#settings').fadeIn();
-                    
+
                     ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
                     // stop animation
 
@@ -464,62 +462,92 @@ $(document).ready(function(){
         $(this).addClass('active');
 
     });
+    
+    //save user inputs to html interface.
+    $(document).on('keyup', 'table input', function() {
 
+        $(this).attr('value',$(this).val());
 
+    }); 
 
-}); 
-// End docmennt ready
+    //[SETTINGS]
+    
+    const images = document.querySelectorAll('.imgc');
 
-$(document).on('keyup', 'table input', function() {
-
-    $(this).attr('value',$(this).val());
-
-}); 
-
-//settings - checkbox & color picker - handler  [in] 
-
-const toggle = document.querySelectorAll('.toggle');
-
-for (var i = 0; toggle.length > i; i++) {
-    toggle[i].addEventListener('click', function () {
-        this.classList.toggle('is-on');
+    //#tap1_zoom
+    $('#tap1_zoom').on('click', function(){
+        className = $(this).attr('class');
+        if (className.slice(-2,)=='on'){
+            console.log('off')
+            $(this).parent().find('#chkbxt').text('مفعل');
+            for (var i = 0; images.length > i; i++) {
+                images[i].classList.toggle('zoomEffect');
+            }
+        }
+        else {
+            console.log('on');
+            $(this).parent().find('#chkbxt').text('غير مفعل');
+            for (var i = 0; images.length > i; i++) {
+                images[i].classList.toggle('zoomEffect');
+            }
+        }
     });
-}
 
-//#random event
-$('#random').on('click', function(){
-    className = $(this).attr('class');
-    if (className.slice(-2,)=='on'){
-        console.log('off')
-        $(this).parent().find('#chkbxt').text('مفعل');
+    //#random event
+    $('#random').on('click', function(){
+        className = $(this).attr('class');
+        if (className.slice(-2,)=='on'){
+            console.log('off')
+            $(this).parent().find('#chkbxt').text('مفعل');
+        }
+        else {
+            console.log('on');
+            $(this).parent().find('#chkbxt').text('غير مفعل');
+        }
+    });
+
+    //#watermark
+    $('#watermark').on('click', function(){
+        className = $(this).attr('class');
+        if (className.slice(-2,)=='on'){
+            console.log('off')
+            $(this).parent().find('#chkbxt').text('مفعل');
+            $('#watermark_op').fadeIn();
+        }
+        else {
+            console.log('on');
+            $(this).parent().find('#chkbxt').text('غير مفعل');
+            $('#watermark_op').fadeOut();
+        }
+    });
+
+
+    const toggle = document.querySelectorAll('.toggle');
+
+    for (var i = 0; toggle.length > i; i++) {
+        toggle[i].addEventListener('click', function () {
+            this.classList.toggle('is-on');
+        });
     }
-    else {
-        console.log('on');
-        $(this).parent().find('#chkbxt').text('غير مفعل');
-    }
-});
+    //settings - checkbox & color picker - handler
+    $(document).on('change', 'input.settingsInput[type=color]', function() {
+        this.parentNode.style.backgroundColor = this.value;
+    });
 
-//#watermark
-$('#watermark').on('click', function(){
-    className = $(this).attr('class');
-    if (className.slice(-2,)=='on'){
-        console.log('off')
-        $(this).parent().find('#chkbxt').text('مفعل');
-        $('#watermark_op').fadeIn();
-    }
-    else {
-        console.log('on');
-        $(this).parent().find('#chkbxt').text('غير مفعل');
-        $('#watermark_op').fadeOut();
-    }
-});
 
-$(document).on('change', 'input.settingsInput[type=color]', function() {
-    this.parentNode.style.backgroundColor = this.value;
-});
+}); 
 
-//settings - checkbox & color picker - handler  [out] 
-
+// End docmennt ready
 
 // Trigger Tabs PLugin
 new Tabby('[data-tabs]');
+
+
+
+
+
+
+
+
+
+

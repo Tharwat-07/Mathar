@@ -920,3 +920,41 @@ START HELPER CLASSES
 /*-----------------------------------------------------------------------
 END HELPER CLASSES
 -----------------------------------------------------------------------*/
+
+/* Images Zoom on table 1: in */
+
+.zoomeffects{
+	clear:both;	
+}
+.zoomeffects .half {
+    float: left;
+    margin: 1%;
+    width: 48%;
+}
+
+.zoomEffect{
+    display:inline-block;
+    border:0;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+.zoomEffect:hover{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+
+/* Images Zoom on table 1: out */
