@@ -486,15 +486,31 @@ for (var i = 0; toggle.length > i; i++) {
     });
 }
 
-$('.toggle').on('click', function(){
+//#random event
+$('#random').on('click', function(){
     className = $(this).attr('class');
     if (className.slice(-2,)=='on'){
         console.log('off')
-        $(this).parent().find('#chkbxt').text('غير مفعل');
+        $(this).parent().find('#chkbxt').text('مفعل');
     }
     else {
         console.log('on');
+        $(this).parent().find('#chkbxt').text('غير مفعل');
+    }
+});
+
+//#watermark
+$('#watermark').on('click', function(){
+    className = $(this).attr('class');
+    if (className.slice(-2,)=='on'){
+        console.log('off')
         $(this).parent().find('#chkbxt').text('مفعل');
+        $('#watermark_op').fadeIn();
+    }
+    else {
+        console.log('on');
+        $(this).parent().find('#chkbxt').text('غير مفعل');
+        $('#watermark_op').fadeOut();
     }
 });
 

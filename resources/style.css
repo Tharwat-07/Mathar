@@ -620,7 +620,7 @@ table.dataTable tbody td {
 .toggle {
     max-width: 100%;
     height: 40px;
-    background: #17cc8e;
+    background: lightgrey;
     border-radius: 999px;
     position: relative;
     -webkit-transition: all 300ms ease;
@@ -633,7 +633,7 @@ table.dataTable tbody td {
     width: 32px;
     position: absolute;
     top: 50%;
-    right: calc(100% - 36px);
+    right: 4px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     background: white;
@@ -642,12 +642,12 @@ table.dataTable tbody td {
     transition: all 300ms ease;
 }
 .toggle.is-on {
-    background: lightgrey;
+    background: #17cc8e;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
 }
 .toggle.is-on .toggle__handle {
-    right: 4px;
+    right: calc(100% - 36px);
     background: white;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;

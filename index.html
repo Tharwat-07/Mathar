@@ -75,7 +75,7 @@ START SETTING MODAL
                                 <div class="grid">
                                     <h3>عام</h3>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='.نوع الخط المستخدم فى كتابة المسائل'>
                                         <div class="form-item__control">
                                             <select class="control control--select">
                                                 <option selected="selected">Bahij Yakout</option>
@@ -84,25 +84,25 @@ START SETTING MODAL
                                                 <option>Traditional</option>
                                             </select>
                                         </div>
-                                        <label class="form-item__label">:نوع الـخط</label>
+                                        <label class="form-item__label">:نوع الخط</label>
                                     </div>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='.حجم الخط المستخدم فى كتابة المسائل'>
                                         <div class="form-item__control">
                                             <input class='settingsInput' type="number" min="40" max="100" value="70" required="">
                                         </div>
                                         <label class="form-item__label">:حجم الخط</label>
                                     </div>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='.عدد الأوراق المطلوب تكوينها من المسائل المختارة عند الضغط على زر تكوين فى نافذة المختارات'>
                                         <div class="form-item__control">
                                             <input class='settingsInput' type="number" min="1" max="250" value="1" required="">
                                         </div>
                                         <label class="form-item__label">:عدد الأوراق</label>
                                     </div>
                                     <div class='line'></div>  
-                                    <div class="form-item">
-                                        <div class="form-item__control toggle">
+                                    <div class="form-item" title='.(ينصح به) ترتيب عشوائى للمسائل المختارة فى كل ورقة يتم تكوينها'>
+                                        <div id='random' class="form-item__control toggle is-on">
                                             <div class="toggle__handle"></div>
                                             <div id='chkbxt'>مفعل</div>
                                         </div>
@@ -110,16 +110,23 @@ START SETTING MODAL
                                     </div>
                                     <div class='line'></div>
                                     <div class="form-item">
-                                        <div class="form-item__control toggle">
+                                        <div id='watermark' class="form-item__control toggle">
                                             <div class="toggle__handle"></div>
-                                            <div id='chkbxt'>مفعل</div>
+                                            <div id='chkbxt'>غير مفعل</div>
                                         </div>
-                                        <label class="form-item__label">:وضـع المـطـور</label>
+                                        <label class="form-item__label">:علامة مائية</label>
+                                    </div>
+                                    <div class='line'></div>
+                                    <div id='watermark_op' class="form-item" style="display:none;" title='.العلامة المائية هى نص مختار يظهر فى خلفية ورقة الاسئلة'>
+                                        <div class="form-item__control toggle">
+                                            <input class='settingsInput' value='علامة مائية'>
+                                        </div>
+                                        <label class="form-item__label">:العلامة مائية</label>
                                     </div>
                                     <div class='line'></div>
                                     <h3>الآلوان</h3>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='لون العناوين الرئيسية بالخط الكبير'>
                                         <div class="form-item__control">
                                             <div class='parentCP'>
                                                 <input class='settingsInput' type="color" value="#000000">
@@ -128,7 +135,7 @@ START SETTING MODAL
                                         <label class="form-item__label">:لون رئيسى</label>
                                     </div>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='لون المسائل'>
                                         <div class="form-item__control">
                                             <div class='parentCP'>
                                                 <input class='settingsInput' type="color" value="#000000">
@@ -137,7 +144,7 @@ START SETTING MODAL
                                         <label class="form-item__label">:لون ثانوى</label>
                                     </div>
                                     <div class='line'></div>
-                                    <div class="form-item">
+                                    <div class="form-item" title='لون الإجابات'>
                                         <div class="form-item__control">
                                             <div class='parentCP'>
                                                 <input class='settingsInput' type="color" value="#000000">
