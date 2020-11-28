@@ -346,7 +346,8 @@ $(document).ready(function(){
         id: "wheelzoom.exe",
         immediateRender: true,
         prefixUrl: './resources/openseadrag/images/', /* icons path */
-        buildPyramid: false
+        buildPyramid: true, 
+        useCanvas:false
     });
 
     viewer.setVisible(false);
@@ -367,7 +368,7 @@ $(document).ready(function(){
 
         oldTiledImage.setOpacity(0);
         newTiledImage.setOpacity(1);
-        //nextTiledImage.setPreload(true);
+        nextTiledImage.setPreload(true);
     }); 
     // IMAGE VIEWER CODE SEMI-END //
 
@@ -395,6 +396,7 @@ $(document).ready(function(){
 
             // start animation 
 
+            //ZZ: collect data from table 2
             var id_per_row = empty_table.columns(1).data().toArray()[0];
             var ops_per_row = empty_table.columns(7).data().toArray()[0];
             var id_cols_length = empty_table.rows()[0].length;
@@ -407,34 +409,41 @@ $(document).ready(function(){
                 });
                 dict[i] = sdict;
             };
+            //ZZ
+
+            viewer.addHandler('tile-loaded', function(){
+
+                viewer.setVisible(true);
+                $('#collect_data_t2').prop('disabled', false)
+                $('#ToggleImages').fadeIn();
+                $('#saveImage').fadeIn();
+                $("#Tap3_loader_container").fadeOut("slow");
+
+                $('.alert').fadeOut();
+                ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
+                // stop animation
+
+            });
 
             async function run() {
 
-                tileSources = await eel.getImages(id_per_row, dict)(); 
+                //fetch images from python server.
+                tileSources = await eel.getImages(id_per_row, dict)();
+
                 viewer.setVisible(false);
 
-                viewer.addHandler('tile-loaded', function(){
-
-                    viewer.setVisible(true);
-                    $('#collect_data_t2').prop('disabled', false)
-                    $('#ToggleImages').fadeIn();
-                    $('#saveImage').fadeIn();
-                    $("#Tap3_loader_container").fadeOut("slow");
-                    
-                    ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
-                    // stop animation
-
-                });
-
                 //remove prev tiles/images and add newer ones. 
-                viewer.world.removeAll();
                 viewer.addTiledImage({
-                    tileSource: {url: tileSources[1], type: 'image', buildPyramid: true, useCanvas:false},
-                    index: 0,
+                    tileSource: {url: tileSources[0], type: 'image'},
+                    index: 1,
+                    replace: true,
+                    preload: true
                 });
                 viewer.addTiledImage({
-                    tileSource: {url: tileSources[0], type: 'image', buildPyramid: true, useCanvas:false},
-                    index: 1,
+                    tileSource: {url: tileSources[1], type: 'image'},
+                    index: 0,
+                    replace: true,
+                    preload: true,
                 });
 
                 index = 1
@@ -462,7 +471,7 @@ $(document).ready(function(){
         $(this).addClass('active');
 
     });
-    
+
     //save user inputs to html interface.
     $(document).on('keyup', 'table input', function() {
 
@@ -471,7 +480,7 @@ $(document).ready(function(){
     }); 
 
     //[SETTINGS]
-    
+
     const images = document.querySelectorAll('.imgc');
 
     //#tap1_zoom
