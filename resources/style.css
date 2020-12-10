@@ -398,7 +398,7 @@ table.dataTable tbody td {
 -----------------------------------------------------------------------*/
 
 .zoomer {
-    background: url("hexagon.png");
+    background: url("back.svg");
     border: 1px solid #dee2e6;
     height: 95%;
     overflow: hidden;
