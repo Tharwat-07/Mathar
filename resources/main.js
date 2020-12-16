@@ -146,8 +146,8 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var t = $('#full_table').DataTable( {
-
-        rowReorder:true,
+        "dom": "ft",
+        rowReorder:false,
         data: dataSet,
         columns: [
             { title: "index" },

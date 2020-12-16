@@ -96,6 +96,22 @@
 01. END APP FONTS
 -----------------------------------------------------------------------*/
 
+
+
+/* public inputs */
+input {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 2px;
+    text-align: center
+}
+input:hover {
+    border: 1px solid #0db379;
+    box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;    
+}
+/*--------------------*/
+
+
 /*-----------------------------------------------------------------------
 02. START GENERAL STYLES
 -----------------------------------------------------------------------*/
@@ -338,11 +354,21 @@ th {
 }
 
 /* table body style */
+
+/* center table content verticlly centered */
+table.dataTable tbody td, table.dataTable th.dt-center {
+    word-break: break-all;
+    vertical-align: middle;
+}
+
 table.dataTable {
     color: #183a56;
 }
 
-
+/* to center the filter. */
+#full_table_wrapper{
+    text-align: center;
+}
 /* Table white Spcee */
 .dataTables_wrapper {
     margin: 30px 5px 30px 5px;
@@ -350,26 +376,11 @@ table.dataTable {
 
 /* search box style */
 #full_table_filter {
-    margin-bottom: 20px;
+    display: inline-block; 
+    float: none; /* disabled this shit to center the filter.*/
+    margin-bottom: 20px;   
 }
 
-.dataTables_wrapper .dataTables_filter input {
-    border: 1px solid #dee2e6;
-    padding: 5px;
-    background-color: #fff;
-    margin-right: 5px;
-}
-
-.dataTables_wrapper .dataTables_filter input:focus {
-    border: 1px solid #0db379;
-    box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
-}
-
-
-table.dataTable tbody td {
-    word-break: break-all;
-    vertical-align: middle;
-}
 /*-----------------------------------------------------------------------
 05. END FULL TABLE
 -----------------------------------------------------------------------*/
@@ -383,11 +394,7 @@ table.dataTable tbody td {
     margin-bottom: 30px;
 }
 
-/* For just Center ( Remove Button ) HADADAY */
-#section2 .r_b_s {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-}
+
 
 /*-----------------------------------------------------------------------
 06. END EMPTY TABLE
@@ -790,10 +797,6 @@ AHMED4CSS entered
 /* table options stuff */
 .settings input  { 
     margin-bottom: 10px;
-}
-
-input {
-    text-align: center
 }
 
 /* disable text selection*/
