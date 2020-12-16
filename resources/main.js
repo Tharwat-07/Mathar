@@ -45,11 +45,14 @@ $(window).load(function() {
 });
 
 
-/* dataSet custom variables to make me write less stuff when adding data to table :D */ // bandtio say OMG
+/* init public powerfull funcs */
 var choose_row_btn = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
 function image(image){return "<div class='imgc'><img class='img' src='./images/"+image+".png' alt='img'></div>"};
-
 function text(txt){return `<div id="textCell">${txt}</div>`;};
+function colIcon(icon, title){return `<div style="width: 100%;"><div class="${icon}" title="${title}"> </div></div>`};
+// colIcon vars
+custom_title_d = 'هذه المسئلة ديناميكة'
+custom_title_s = 'هذه المسئلة إستاتيكية'
 /* -------------------------------------------------------------------------------- */
 var dataSet = [
 
@@ -65,32 +68,32 @@ var dataSet = [
 `+choose_row_btn
     ],
 
-    [text("أوجد مجموعة الحل فى ح للمعادلة : د(س)=0 فى كل شكل."), "m00_1", image('m00_1'), 
+    [text("أوجد مجموعة الحل فى ح للمعادلة : د(س)=0 فى كل شكل."), "d m00_1", image('m00_1'), 
      "L0", "ص13س1", "graphs", "حل المعادلة", choose_row_btn],
 
-    [text("إذا كان منحنى الدالة التربيعية د يقطع محور السينات فى النقطتين (2،0)،(-3،0) فإن مجموعة حل المعادلة : د(س)=0 فى ح هى"), "m00_2_1", image('m00_2_1'), 
+    [text("إذا كان منحنى الدالة التربيعية د يقطع محور السينات فى النقطتين (2،0)،(-3،0) فإن مجموعة حل المعادلة : د(س)=0 فى ح هى"), "s m00_2_1", image('m00_2_1'), 
      "L0", "ص13س2-1", "MCQ", "حل المعادلة", choose_row_btn],
 
-    [text("مجموعة حل المعادلة :س^2-س=0 فى ح هى"), "m00_2_2", image('m00_2_2'), 
+    [text("مجموعة حل المعادلة :س^2-س=0 فى ح هى"), "s m00_2_2", image('m00_2_2'), 
      "L0", "ص13س2-2", 
      "MCQ", "حل المعادلة", choose_row_btn],
 
-    [text("إذا كانت: د(س)=س^2+بس+ج،س=2 أحد جذرى المعادلة:د(س)=0 فإن:د(2)="), "m00_2_3", image('m00_2_3'), 
+    [text("إذا كانت: د(س)=س^2+بس+ج،س=2 أحد جذرى المعادلة:د(س)=0 فإن:د(2)="), "s m00_2_3", image('m00_2_3'), 
      "L0", "ص13س2-3", "MCQ", "حل المعادلة", choose_row_btn],
 
-    [text("إذا كان: س=3 جذراً للمعادلة:س^2+مس=3 فإن: م="), "m00_2_4", image('m00_2_4'), 
+    [text("إذا كان: س=3 جذراً للمعادلة:س^2+مس=3 فإن: م="), "d m00_2_4", image('m00_2_4'), 
      "L0", "ص13س2-4", "MCQ", "حل المعادلة", choose_row_btn],
 
-    [text("إذا كان أحد جذرى المعادلة: س^2-16=0 هو 4 فإن الجذر الأخر هو"), "m00_2_5", image('m00_2_5'), 
+    [text("إذا كان أحد جذرى المعادلة: س^2-16=0 هو 4 فإن الجذر الأخر هو"), "s m00_2_5", image('m00_2_5'), 
      "L0", "ص13س2-5", "MCQ", "حل المعادلة", choose_row_btn],
 
-    [text("أوجد جبرياً مجموعة حل كل من المعادلات الآتية فى ح :"), "m00_3", image('m00_3'), 
+    [text("أوجد جبرياً مجموعة حل كل من المعادلات الآتية فى ح :"), "s m00_3", image('m00_3'), 
      "L0", "ص13س3", "quest", "حل المعادلة", choose_row_btn],
 
     [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية باستخدام القانون العام مقرباً الناتج لرقم عشرى واحد :"), "m00_4", image('m00_4'), 
      "L0", "ص14س4", "quest", "حل المعادلة", choose_row_btn],
 
-    [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية جبرياً وحقق الناتج بيانياً :"), "m00_5", image('m00_5'), 
+    [text("أوجد فى ح مجموعة حل كل من المعادلات الآتية جبرياً وحقق الناتج بيانياً :"), "d m00_5", image('m00_5'), 
      "L0", "ص14س5", "quest", "حل المعادلة", choose_row_btn],
 
     [text("إذا كان مجموع الأعداد الصحيحة المتتالية (1+2+3+...+ن) يعطى بالعلاقة: ج=ن/2(1+ن) فكم عدداً صحيحاً متتالياً بدءاً من العدد 1 يكون مجموعها مساوياً :"), "m00_6", image('m00_6'), 
@@ -148,7 +151,29 @@ $(document).ready(function(){
         data: dataSet,
         columns: [
             { title: "index" },
-            { title: "id" },
+            {   
+                title: "id",
+                render: function(data, type){
+                    var icon = '';
+                    var title ='';
+                    var data = data.split(' ')
+                    if (data.length==1){data = ['d', data]}
+                    if (type=='display'){
+                        switch(data[0]){
+                            case 'd':
+                                icon='dynamic_lamp';
+                                title = custom_title_d;
+                                break;
+                            case 's':
+                                icon='static_lamp';
+                                title= custom_title_s;
+                                break;
+                        }
+                        return colIcon(icon, title)+data[1];
+                    } 
+                    return data[1];
+                }
+            },
             { title: "المسئلة" },
             { title: "درس" },
             { title: "مرجع" },
