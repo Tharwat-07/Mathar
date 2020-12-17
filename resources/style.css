@@ -191,8 +191,9 @@ th {
 }
 
 .img {
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
+
 }
 
 /*-----------------------------------------------------------------------
@@ -960,13 +961,13 @@ END HELPER CLASSES
 .zoomEffect:hover{
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.2);
+    -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.2);   
+    -ms-transform: scale(1.5);   
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.2);
+    -moz-transform: scale(1.5);
     transition: all 200ms ease-in;
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 /* Images Zoom on table 1: out */

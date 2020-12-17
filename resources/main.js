@@ -58,11 +58,10 @@ $(document).ready(function(){
 
     // INIT vars 
     var ict2 = 1
-    // This var for ( Remove Button ) sound click only * H A D A D Y *
     var audio = new Audio("resources/btnclk.wav"); 
-
+    
     /* radio-active */ 
-    var t = $('#full_table').DataTable( {
+    var fullTable = $('#full_table').DataTable( {
         "dom": '<"top">f<"bottom"t><"#margin5px"><"clear">lp',
         rowReorder:false,
         data: dataSet,
@@ -108,7 +107,7 @@ $(document).ready(function(){
         }], 
         "lengthChange":true,
         "paging":true,
-        "pageLength": 50,
+        "pageLength": 25,
         "lengthMenu": [ 25, 50, 100, 200, 800 ],
         "bPaginate":false,
         "order": [[ 4, 'asc' ]],
@@ -154,14 +153,22 @@ $(document).ready(function(){
         }
 
     });
-
+    
+    //table pages
+    var fullTablePages = fullTable.rows().nodes();
+    
     // draw temp index increament on column 0.
-    t.on('order.dt search.dt', function () {
-        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+    fullTable.on('order.dt search.dt', function () {
+        fullTable.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
             cell.innerHTML = i+1;
         });
     }).draw();
-
+    
+    //button sound on click.
+    fullTable.on('click', 'button', function () {
+        audio.play();
+    });
+    
     /* radio-active */ 
     var empty_table = $('#empty_table').DataTable({
 
@@ -224,15 +231,8 @@ $(document).ready(function(){
         }
     });
 
-    // draw temp index increament on column 0.
-    t.on('order.dt', function () {
-        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-            cell.innerHTML = i+1;
-        });
-    }).draw();
-
     /* move row between tables */ 
-    $(".btn_1").on('click', function() {
+    fullTable.on('click', '.btn_1', function () {
 
         var row = $(this).closest('tr').clone();
 
@@ -268,7 +268,6 @@ $(document).ready(function(){
 
     /* remove row from table 2 - EVENT */ 
     $('#empty_table tbody').on( 'click', '.btn_1', function () {
-
         empty_table
             .row( $(this).parents('tr') )
             .remove()
@@ -401,13 +400,6 @@ $(document).ready(function(){
     });
 
 
-    // and this code for all button sound click * H A D A D Y *Ahmed4end:not all, son.
-    $("button:not(#collect_data_t2)").on('click', function() {
-
-        audio.play();
-
-    });
-
     // teansfir active class for tabs
     $(".nav-link").click(function() {
 
@@ -425,7 +417,7 @@ $(document).ready(function(){
 
     //[SETTINGS]
 
-    const images = document.querySelectorAll('.imgc');
+    const images = $('.imgc', fullTablePages)
 
     //#tap1_zoom
     $('#tap1_zoom').on('click', function(){
@@ -433,6 +425,7 @@ $(document).ready(function(){
         if (className.slice(-2,)=='on'){
             console.log('off')
             $(this).parent().find('#chkbxt').text('مفعل');
+
             for (var i = 0; images.length > i; i++) {
                 images[i].classList.toggle('zoomEffect');
             }
@@ -494,8 +487,6 @@ $(document).ready(function(){
 
 // Trigger Tabs PLugin
 new Tabby('[data-tabs]');
-
-
 
 
 //dataset - imported from python.
