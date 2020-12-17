@@ -355,6 +355,13 @@ th {
 
 /* table body style */
 
+/* verticall 10px height div between table and its info bellow . - leave it alone, senpai. */
+#margin5px {
+    width:100%;
+    height: 10px;
+}
+/* -------- */
+
 /* center table content verticlly centered */
 table.dataTable tbody td, table.dataTable th.dt-center {
     word-break: break-all;

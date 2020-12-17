@@ -63,7 +63,7 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var t = $('#full_table').DataTable( {
-        "dom": '<"top">f<"bottom"t>lp<"clear">',
+        "dom": '<"top">f<"bottom"t><"#margin5px"><"clear">lp',
         rowReorder:false,
         data: dataSet,
         columns: [
