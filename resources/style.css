@@ -366,9 +366,11 @@ table.dataTable {
 }
 
 /* to center the filter. */
-#full_table_wrapper{
-    text-align: center;
+.dataTables_wrapper .dataTables_filter {
+  width:100%;
+  text-align:center;
 }
+
 /* Table white Spcee */
 .dataTables_wrapper {
     margin: 30px 5px 30px 5px;
