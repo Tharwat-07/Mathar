@@ -140,6 +140,7 @@ body {
     margin-top: 63px;
 }
 
+
 a {
     color: #fff;
 }
@@ -192,6 +193,7 @@ th {
 
 .img {
     max-width: 500px;
+    min-width: 300px;
     height: auto;
 
 }
@@ -379,17 +381,13 @@ table.dataTable {
   text-align:center;
 }
 
-/* Table white Spcee */
-.dataTables_wrapper {
-    margin: 30px 5px 30px 5px;
-}
-
 /* search box style */
 #full_table_filter {
     display: inline-block; 
     float: none; /* disabled this shit to center the filter.*/
     margin-bottom: 20px;   
 }
+
 
 /*-----------------------------------------------------------------------
 05. END FULL TABLE
@@ -968,6 +966,7 @@ END HELPER CLASSES
     -moz-transform: scale(1.5);
     transition: all 200ms ease-in;
     transform: scale(1.5);
+    background-color: rgba(35, 35, 25, 0.2);
 }
 
 /* Images Zoom on table 1: out */
