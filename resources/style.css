@@ -381,6 +381,12 @@ table.dataTable {
   text-align:center;
 }
 
+/* Table white Spcee */
+.dataTables_wrapper {
+    margin-top: 15px;
+}
+
+
 /* search box style */
 #full_table_filter {
     display: inline-block; 
