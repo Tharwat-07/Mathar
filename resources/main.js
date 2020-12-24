@@ -65,6 +65,7 @@ $(document).ready(function(){
 
     /* radio-active */ 
     var fullTable = $('#full_table').DataTable( {
+        "autoWidth":false,
         "dom": '<"top">f<"bottom"t><"#margin5px"><"clear">lp',
         rowReorder:false,
         data: dataSet,
@@ -93,7 +94,7 @@ $(document).ready(function(){
                     return data[1];
                 }
             },
-            { title: "المسئلة" },
+            { title: "المسئلة", width:'50%' },
             { },
             { 
                 title: "نوع",
@@ -115,7 +116,7 @@ $(document).ready(function(){
         { 
              "targets": 3,
              "data": 3,
-             "title": "<img src='./resources/reference.png'>"
+             "title": "<img style='height:25px;width:25px;' src='./resources/reference.png'>"
         }], 
         "lengthChange":true,
         "paging":true,
@@ -188,7 +189,7 @@ $(document).ready(function(){
         columns: [
             { title: "index" },
             { title: "id" },
-            { title: "المسئلة" },
+            { title: "المسئلة", width:'50%'},
             { },
             { title: "نوع" },
             { title: "مفتاح" },
@@ -358,9 +359,10 @@ $(document).ready(function(){
             function extractOnlyText(ele){
                 return $('#ftableID', ele).text();
             };
-            //ZZ: collect data from table 2
+            
+            // collect data from table 2 g8
             var id_per_row = empty_table.columns(1).data().toArray()[0].map(extractOnlyText);
-            console.log(id_per_row);
+
             var ops_per_row = empty_table.columns(7).data().toArray()[0];
             var id_cols_length = empty_table.rows()[0].length;
             var dict = {}
@@ -372,8 +374,8 @@ $(document).ready(function(){
                 });
                 dict[i] = sdict;
             };
-            //ZZ
-
+            // g8
+            
             viewer.addHandler('tile-loaded', function(){
 
                 viewer.setVisible(true);
@@ -524,7 +526,6 @@ function parseRef(unit, lesson, page, problem, node='') {
     if (node==undefined){node=''}
     else{node=`م${node}`}
     arr = [unit, lesson, page, problem, node].filter(word=> word.length>1);
-    console.log(arr.join('<br>'));
     return arr.join('<br>')
 }
 
