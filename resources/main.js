@@ -179,6 +179,7 @@ $(document).ready(function(){
 
     //button sound on click.
     fullTable.on('click', 'button', function () {
+        audio.pause();
         audio.play();
     });
 
@@ -333,8 +334,6 @@ $(document).ready(function(){
 
     /* collect data from table 2 by button click */
     $( "#collect_data_t2" ).click(function() {
-        //play sound for this button.
-        //https://www.youtube.com/watch?v=x7bIbVlIqEc
         audio.play()
 
         if (empty_table.data().count() == 0) {
@@ -362,8 +361,8 @@ $(document).ready(function(){
             
             // collect data from table 2 g8
             var id_per_row = empty_table.columns(1).data().toArray()[0].map(extractOnlyText);
-
-            var ops_per_row = empty_table.columns(7).data().toArray()[0];
+            
+            var ops_per_row = empty_table.columns(6).data().toArray()[0];
             var id_cols_length = empty_table.rows()[0].length;
             var dict = {}
             for (var i = 0; i < id_cols_length; i++) {
@@ -389,9 +388,8 @@ $(document).ready(function(){
                 // stop animation
 
             });
-
             async function run() {
-
+                
                 //fetch images from python server.
                 tileSources = await eel.getImages(id_per_row, dict)();
 
