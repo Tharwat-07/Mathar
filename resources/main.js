@@ -452,6 +452,10 @@ $(document).ready(function(){
         }
         else {
             console.log('on');
+            swal("الأن يمكنك تكبير المسائل فى الجدول بتحريك الماوس فوقها.", {
+                button: "حسناً",
+                timer:3000
+            });
             $(this).parent().find('#chkbxt').text('غير مفعل');
             for (var i = 0; images.length > i; i++) {
                 images[i].classList.toggle('zoomEffect');
