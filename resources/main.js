@@ -39,13 +39,13 @@ document.onkeydown = function(e) {
 $(window).load(function() {
 
     $(".se-pre-con").delay(10).fadeOut("slow");
-
+    
 });
 
 
 /* init public powerfull funcs */
 var choose_row_btn = "<button class='btn_1 icon-plus'><span>أختر</span></button>";
-function image(image){return "<div class='imgc'><img class='img' src='./images/"+image+".png' alt='img'></div>"};
+function image(image){return `<div class='imgc'><img class='img lozad' data-src='./images/${image}.png' loading='lazy' alt='${image}'></div>`};
 function text(txt){return `<div id="textCell">${txt}</div>`;};
 function colIcon(icon, title, id){
     return `<div style="writing-mode: tb-rl;display:inline-block;"><div style="text-align: center;margin-bottom:5px;" class="${icon}" title="${title}"></div><div style="display: inline-block;" id="ftableID">${id}</div>`
@@ -166,10 +166,19 @@ $(document).ready(function(){
         }
 
     });
-
+    
+    
     //table pages
-    var fullTablePages = fullTable.rows().nodes();
+    var fullTableNodes = fullTable.rows().nodes();
+    
+    //lazy loader for images on table 1.
+    const ftImages = $('.lozad', fullTableNodes);
+    for (var i = 0; i < ftImages.length; i++) {
+        const observer = lozad(ftImages[i]); 
+        observer.observe();
+    };
 
+    
     // draw temp index increament on column 0.
     fullTable.on('order.dt search.dt', function () {
         fullTable.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
@@ -183,7 +192,7 @@ $(document).ready(function(){
         audio.play();
     });
 
-    /* radio-active */ 
+    //table 2
     var empty_table = $('#empty_table').DataTable({
         rowReorder: true,
         data: [],
@@ -273,23 +282,19 @@ $(document).ready(function(){
         row  = row.html();
         empty_table.row.add($('<tr>'+row+'</tr>')).draw();
 
-        // class .r_b_s for ( Remove Button ) sound click, BANDITO:*don't get confused*
-        // AHMED4END: *https://www.youtube.com/watch?v=BW1aX0IbZOE*
-        // this code for ( Remove Button ) sound click only 
-        // look at line 234 if you need the sound click code for all buttons 
+        //button sound on click - table 2.
         $(".r_b_s").on('click', function() { 
             audio.play();
         });
 
     });
 
-    /* remove row from table 2 - EVENT */ 
+    // remove row - table 2
     $('#empty_table tbody').on( 'click', '.btn_1', function () {
         empty_table
             .row( $(this).parents('tr') )
             .remove()
             .draw()
-
     });
 
     async function _openFileLoaction() {
@@ -301,7 +306,7 @@ $(document).ready(function(){
     });
 
 
-    // Img Zooming Plugin
+    // image viewer - tap 3
     var viewer = OpenSeadragon({
         id: "wheelzoom.exe",
         immediateRender: true,
@@ -330,9 +335,9 @@ $(document).ready(function(){
         newTiledImage.setOpacity(1);
         nextTiledImage.setPreload(true);
     }); 
-    // IMAGE VIEWER CODE SEMI-END //
 
-    /* collect data from table 2 by button click */
+    
+    /* collect data - table 2  - by button click */
     $( "#collect_data_t2" ).click(function() {
         audio.play()
 
@@ -359,7 +364,7 @@ $(document).ready(function(){
                 return $('#ftableID', ele).text();
             };
             
-            // collect data from table 2 g8
+            // collect data from table 2 
             var id_per_row = empty_table.columns(1).data().toArray()[0].map(extractOnlyText);
             
             var ops_per_row = empty_table.columns(6).data().toArray()[0];
@@ -373,7 +378,6 @@ $(document).ready(function(){
                 });
                 dict[i] = sdict;
             };
-            // g8
             
             viewer.addHandler('tile-loaded', function(){
 
@@ -420,24 +424,22 @@ $(document).ready(function(){
     });
 
 
-    // teansfir active class for tabs
+    // teansfir active class for tabs - taboo .
     $(".nav-link").click(function() {
 
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
-
     });
 
-    //save user inputs to html interface.
+    //save user inputs to html interface - temp .
     $(document).on('keyup', 'table input', function() {
-
         $(this).attr('value',$(this).val());
 
     }); 
 
     //[SETTINGS]
 
-    const images = $('.imgc', fullTablePages)
+    const images = $('.imgc', fullTableNodes)
 
     //#tap1_zoom
     $('#tap1_zoom').on('click', function(){
