@@ -35,6 +35,25 @@ document.onkeydown = function(e) {
 */
 
 
+//toastr -  init setttings
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "5000",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut",
+} // to adjust visit - https://codeseven.github.io/toastr/demo.html
+
 
 $(window).load(function() {
 
@@ -348,7 +367,7 @@ $(document).ready(function(){
         } 
 
         else {
-            ohSnap('جارى التكوين .. إذهب لنافذة المعاينة', {color: 'blue'});
+            toastr.info('إذهب لنافذة المعاينة لإنتظار النتيجة', 'جارى التكوين');
 
             $("#Tap3_loader_container").fadeIn("slow");
             $('#collect_data_t2').prop('disabled', true)
@@ -378,7 +397,7 @@ $(document).ready(function(){
                 });
                 dict[i] = sdict;
             };
-            
+
             viewer.addHandler('tile-loaded', function(){
 
                 viewer.setVisible(true);
@@ -387,13 +406,13 @@ $(document).ready(function(){
                 $('#saveImage').fadeIn();
                 $("#Tap3_loader_container").fadeOut("slow");
 
-                $('.alert').fadeOut();
-                ohSnap('تم التكوين .. (نافذة معاينة النتيجة)', {color: 'green'});
+        
+                toastr.success('إذهب لنافذة المعاينة لرؤية النتيجة', 'تم التكوين');
                 // stop animation
 
             });
             async function run() {
-                
+                //viewer.world.resetItems();
                 //fetch images from python server.
                 tileSources = await eel.getImages(id_per_row, dict)();
 
@@ -409,7 +428,7 @@ $(document).ready(function(){
                 viewer.addTiledImage({
                     tileSource: {url: tileSources[1], type: 'image'},
                     index: 0,
-                    replace: true,
+                    replace:true,
                     preload: true,
                 });
 
