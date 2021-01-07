@@ -56,9 +56,7 @@ toastr.options = {
 
 
 $(window).load(function() {
-
     $(".se-pre-con").delay(10).fadeOut("slow");
-    
 });
 
 
@@ -82,7 +80,7 @@ $(document).ready(function(){
     var ict2 = 1
     var audio = new Audio("resources/btnclk.wav"); 
 
-    /* radio-active */ 
+    //table 1
     var fullTable = $('#full_table').DataTable( {
         "autoWidth":false,
         "dom": '<"top">f<"bottom"t><"#margin5px"><"clear">lp',
@@ -123,8 +121,6 @@ $(document).ready(function(){
             { title: "مفتاح" },
             { title: "إعدادات" }
         ],
-
-        
         "columnDefs": [{
             "searchable": true,
             "orderable": false,
@@ -162,7 +158,7 @@ $(document).ready(function(){
             }
         },
 
-        // Cool feature: it makes the filter multi column filter so it filter many colmns at once not only one . 
+        // first table coumn filter.
         initComplete: function () {
             this.api().columns().every( function () {
                 var column = this;
@@ -172,12 +168,10 @@ $(document).ready(function(){
                     var val = $.fn.dataTable.util.escapeRegex(
                         $(this).val()
                     );
-
                     column
                         .search( val ? '^'+val+'$' : '', true, false )
                         .draw();
                 } );
-
                 column.data().unique().sort().each( function ( d, j ) {
                     select.append( '<option value="'+d+'">'+d+'</option>' );
                 } );
@@ -280,17 +274,21 @@ $(document).ready(function(){
     fullTable.on('click', '.btn_1', function () {
 
         var row = $(this).closest('tr').clone();
-
+        var rowID = row.find('#ftableID').html()
+        //show message.
+        toastr.info(`.لجدول المختارات ${rowID} تم إضافة`, rowID, {timeOut: 1000, 
+                                                                               preventDuplicates:false, 
+                                                                               positionClass:"toast-bottom-center"});
         //collect options cell - table 1.
         var options_t1 = row.find('td:last-child');
         options_t1.find('button').remove();
-
+        
         // convert inputs to <p> -> table 2.
         $('input', options_t1).each(function() {
             $(this).replaceWith('<p id="'+this.id+'">'+this.value+'</p>');
         });
         options_t1 = options_t1.html();
-
+        
         //remove options cell before adding the row to table 2.
         row.find('td:last-child').remove();
         row.find('td:first-child').html(ict2);
@@ -378,7 +376,6 @@ $(document).ready(function(){
 
             // start animation 
  
-            
             function extractOnlyText(ele){
                 return $('#ftableID', ele).text();
             };
