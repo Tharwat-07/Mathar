@@ -65,7 +65,7 @@ var choose_row_btn = "<button class='btn_1 icon-plus'><span>أختر</span></but
 function image(image){return `<div class='imgc'><img class='img lozad' data-src='./images/${image}.png' loading='lazy' alt='${image}'></div>`};
 function text(txt){return `<div id="textCell">${txt}</div>`;};
 function colIcon(icon, title, id){
-    return `<div style="writing-mode: tb-rl;display:inline-block;"><div style="text-align: center;margin-bottom:5px;" class="${icon}" title="${title}"></div><div style="display: inline-block;" id="ftableID">${id}</div>`
+    return `<div style="writing-mode: tb-rl;display:inline-block;"><div style="text-align: center;margin-bottom:5px;" class="${icon}" data-title="${title}"></div><div style="display: inline-block;" id="ftableID">${id}</div>`
 };
 function vwrap(txt) {return `<div style="writing-mode: vertical-lr;display:inline-block;">${txt}</div>`}
 // colIcon vars
