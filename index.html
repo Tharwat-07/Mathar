@@ -31,7 +31,6 @@ END CSS FILES
 
     </head>
     <body>
-
         <!--==========================
 START PRELOADER
 ==========================-->
@@ -40,18 +39,72 @@ START PRELOADER
 END PRELOADER
 ==========================-->
 
-        <!--==========================
-START TABS
-==========================-->
-        <ul class="nav fixed-top justify-content-center" data-tabs>
-            <li class="nav-item"><a class="nav-link active" data-tabby-default href="#section1">جدول المسائل</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section2">جدول المختارات</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section3">معاينة النتيجة</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section4">عن البرنامج</a></li>
-        </ul>
-        <!--==========================
-END TABS
-==========================-->
+        <div class="tabs-container">
+            <ul class="tabs">
+                <li class="active">
+                    <a href=""><span class='tapText'>جدول المسائل</span></a>
+                </li>
+                <li>
+                    <a href=""><span class='tapText'>جدول المختارات</span></a>
+                </li>
+                <li>
+                    <a href=""><span class='tapText'>المعاينة</span></a>
+                </li>
+                <li>
+                    <a href=""><span class='tapText'>عن البرنامج</span></a>
+                </li>
+            </ul>
+            <div class="tabs-content">
+                <div class="tabs-panel active" data-index="0">
+
+                    <table id="full_table" class="display table table-bordered" style="width:100%"></table>
+
+                </div>
+                <div class="tabs-panel" data-index="1">
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button id="clear_table_2" class="btn_2 icon-remove">تفريغ</button>
+                            <button id="collect_data_t2" class="btn_2 icon-star-2">تكوين</button>
+                        </div>
+                    </div>
+                    <table id="emptyTable" class="display table table-bordered" style="width:100%"> </table>  
+
+                </div>
+                <div class="tabs-panel" data-index="2">
+
+                    <div class="not_yet">
+                        <h1>لم يتم تكوين مسائل بعد</h1>
+                    </div>
+
+                    <div id='Tap3_loader_container' style='display: none;'>
+                        <div class="Tap3_loader"></div>
+                        <h4>إنتظر...جارى التكوين</h4>
+                    </div>
+
+                    <!-- image-->
+                    <div class="zoomer"> <!--= container: made to make a backgroud-color  =-->
+                        <div id="wheelzoom.exe"></div> <!--= the image container =-->
+                    </div>
+                    <!-- Buttons -->
+                    <div class="row2">
+                        <div class="col-12 text-center">
+                            <button id="saveImage" class="btn_2 icon-file" style='display: none;'>فتح مكان الحفظ</button>
+                            <button id="ToggleImages" class="btn_2 icon-star-2" style='display: none;'>أظهر الإجابة</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tabs-panel" data-index="3">
+                    <p>soon...</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
         <!--==========================
 START SETTING MODAL
@@ -179,73 +232,7 @@ START SETTING MODAL
 END SETTING MODAL
 ==========================-->
 
-        <!--==========================
-START TAB 1 CONTENT
-==========================-->
-        <section id="section1" class="tabbed tabbed_default">
-            <table id="full_table" class="display table table-bordered" style="width:100%">
-            </table>
-        </section>
-        <!--==========================
-END TAB 1 CONTENT
-==========================-->
 
-        <!--==========================
-START TAB 2 CONTENT
-==========================-->
-        <section id="section2" class="tabbed">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <button id="clear_table_2" class="btn_2 icon-remove">تفريغ</button>
-                    <button id="collect_data_t2" class="btn_2 icon-star-2">تكوين</button>
-                </div>
-            </div>
-            <table id="emptyTable" class="display table table-bordered" style="width:100%"> 
-            </table>  
-        </section>
-        <!--==========================
-END TAB 2 CONTENT
-==========================-->
-
-        <!--==========================
-START TAB 3 CONTENT
-==========================-->
-        <section id="section3" class="tabbed">
-
-            <div class="not_yet">
-                <h1>لم يتم تكوين مسائل بعد</h1>
-            </div>
-
-            <div id='Tap3_loader_container' style='display: none;'>
-                <div class="Tap3_loader"></div>
-                <h4>إنتظر...جارى التكوين</h4>
-            </div>
-
-            <!-- image-->
-            <div class="zoomer"> <!--= container: made to make a backgroud-color  =-->
-                <div id="wheelzoom.exe"></div> <!--= the image container =-->
-            </div>
-            <!-- Buttons -->
-            <div class="row">
-                <div class="col-12 text-center">
-                    <button id="saveImage" class="btn_2 icon-file" style='display: none;'>فتح مكان الحفظ</button>
-                    <button id="ToggleImages" class="btn_2 icon-star-2" style='display: none;'>أظهر الإجابة</button>
-                </div>
-            </div>
-        </section>
-        <!--==========================
-END TAB 3 CONTENT
-==========================-->
-
-        <!--==========================
-START TAB 4 CONTENT
-==========================-->
-        <section id="section4" class="tabbed">
-        </section>
-
-        <!--==========================
-END TAB 4 CONTENT
-==========================-->
 
         <!--==========================
 START JS SCRIPTS
@@ -256,8 +243,6 @@ START JS SCRIPTS
         <script src="./resources/jquery.min.js"></script> 
         <!-- Bootstrap Lib -->
         <script src="./resources/bootstrap.bundle.min.js"></script>
-        <!-- Tabs Plugins -->
-        <script src="./resources/tabs.js"></script>
         <!-- dataTables - Data Table lib -->
         <script src="./resources/jquery.dataTables.js"></script>
         <!-- dataTables - Row reorder -->

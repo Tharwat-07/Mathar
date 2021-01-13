@@ -96,7 +96,9 @@
 01. END APP FONTS
 -----------------------------------------------------------------------*/
 
-
+* {
+  box-sizing: border-box;
+}
 
 /* public inputs */
 input {
@@ -135,19 +137,9 @@ body {
     font-family: 'Cairo', sans-serif;
     background-color: #fcfefd;
     color: #183a56;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    margin-top: 63px;
+    overflow: hidden;
 }
 
-
-a {
-    color: #fff;
-}
-
-a:hover {
-    color: #fff;
-}
 
 *:focus {
     outline: none
@@ -159,36 +151,6 @@ button:focus{
 
 th {
     font-weight: normal;
-}
-
-#section1 {
-    overflow-y: auto;
-    overflow-x: auto;
-    height: 100%;
-}
-
-#section2 {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
-}
-
-#section3 {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
-}
-
-#section4 {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
-}
-
-#section5 {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
 }
 
 
@@ -225,24 +187,78 @@ th {
 /*-----------------------------------------------------------------------
 04. START TABS
 -----------------------------------------------------------------------*/
+ul {
+  list-style: none;
+}
 
-.nav {
+
+
+a {
+  height: 70px;
+  text-decoration: none;
+  color: white;
+  
+}
+
+.tapText{ /* this is poor vertically centered [DEV] */
+    display: block;
+    margin-top:12px;
+}
+
+.tabs {
     background-color: #183a56;
-}
-
-.nav-item .nav-link {
-    padding: 20px;
-}
-
-.nav-link.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
-    background-color: #17cc8e;
-    border: none;
-    padding: 20px;
+    position: fixed;
+    width:100%;
+    z-index:10;
+    top:0px;
 }
 
-.tabs > section[aria-hidden="true"] {
-    display: none;
+.tabs li a {
+  display: block;
+  position: relative;
+  padding: 10px 25px;
+  background: #183a56;
+  transition: all 0.2s ease-in-out;
+}
+
+.tabs li.active a,
+.tabs li a:hover {
+    color:white;
+    text-decoration: none;
+    background: #17cc8e;
+}
+
+.tabs-content {
+    
+  position: relative;
+  z-index: 2;
+  background: white;
+    
+}
+
+.tabs-panel {
+  display: none;
+}
+
+.tabs-panel.active {
+    padding-top: 70px;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.row2 {
+    margin-bottom: 30px;
 }
 
 /*-----------------------------------------------------------------------
@@ -400,20 +416,6 @@ table.dataTable {
 05. END FULL TABLE
 -----------------------------------------------------------------------*/
 
-/*-----------------------------------------------------------------------
-06. START EMPTY TABLE
------------------------------------------------------------------------*/
-
-#section2 .row {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-
-/*-----------------------------------------------------------------------
-06. END EMPTY TABLE
------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------
 07. START ZOOMING IMG
