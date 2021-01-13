@@ -193,7 +193,7 @@ th {
 
 
 /* table 1 */
-#full_table img, #empty_table img {
+#full_table img, #emptyTable img {
     max-width: 100%;
     max-height: 100%;
 }
