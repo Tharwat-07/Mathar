@@ -297,7 +297,7 @@ $(document).ready(function(){
 
         // convert inputs to <p> -> table 2.
         $('input', optionsT1).each(function() {
-            $(this).replaceWith('<p id="'+this.id+'">'+this.value+'</p>');
+            $(this).replaceWith('<label id="'+this.id+'">'+this.value+'</label>');
         });
         optionsT1 = optionsT1.html();
         
