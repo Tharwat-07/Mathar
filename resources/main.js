@@ -210,10 +210,10 @@ $(document).ready(function(){
     
     //table 2
     var emptyTable = $('#emptyTable').DataTable({
-        rowReorder: true,
+        rowReorder:true,
         data: [],
         columns: [
-            { title: "index" },
+            { title: "i." },
             { title: "id" },
             { title: "المسئلة", width:'50%'},
             { },
@@ -229,13 +229,13 @@ $(document).ready(function(){
         "bInfo":false,
 
         "columnDefs": [{
-            "searchable": false,
+            "searchable": true,
             "orderable": false,
             "targets": 0,
             "className": "dt-center", 
             "targets": "_all"
         },
-        { 
+            { 
              "targets": 3,
              "data": 3,
              "title": "<img src='./resources/reference.png'>"

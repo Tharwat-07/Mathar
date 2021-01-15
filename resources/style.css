@@ -197,6 +197,7 @@ a {
   height: 70px;
   text-decoration: none;
   color: white;
+  text-align:center;
   
 }
 
@@ -376,12 +377,6 @@ a {
 
 /* table body style */
 
-/* verticall 10px height div between table and its info bellow . - leave it alone, senpai. */
-#margin5px {
-    width:100%;
-    height: 10px;
-}
-/* -------- */
 
 /* center table content verticlly centered */
 table.dataTable tbody td, table.dataTable th.dt-center {
@@ -631,11 +626,7 @@ table.dataTable {
     padding-right: 2rem;
     position: relative;
 }
-@media screen and (max-width: 900px) {
-    .grid {
-        max-width: 100%;
-    }
-}
+
 
 /* container logged out */
 
