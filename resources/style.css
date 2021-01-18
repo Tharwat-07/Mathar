@@ -630,57 +630,51 @@ table.dataTable {
 
 /* container logged out */
 
-/* input:: checkbox logged in */
-
-.toggle {
-    max-width: 100%;
-    height: 40px;
-    background: lightgrey;
-    border-radius: 999px;
-    position: relative;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-    cursor: pointer;
-
-}
-.toggle__handle {
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: white;
-    border-radius: 50%;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-.toggle.is-on {
-    background: #17cc8e;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-.toggle.is-on .toggle__handle {
-    right: calc(100% - 36px);
-    background: white;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
+/* TAP 4 */
+.form-item__control input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+    font-size: 200px;
 }
 
-/* ON/OFF text */
-#chkbxt {
-    color: #183a56;
-    position: relative;
-    text-align: center;
-    padding: 10px;
+.form-item__control label {
+	cursor: pointer;
+	text-indent: -9999px;
+	height: 40px;
+	background: lightgrey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
 }
 
-/* input:: checkbox logged out */
+.form-item__control label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.form-item__control input:checked + label {
+	background: #17cc8e;
+}
+
+.form-item__control input:checked + label:after {
+	right: calc(100% - 65px);
+	transform: translateX(-100%);
+}
+
+.form-item__control label:active:after {
+    width: 150px;
+}
 
 .form-item {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
@@ -689,6 +683,11 @@ table.dataTable {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.form-item:hover {
+    background: #dee2e6;
+}
+
 .form-item__control {
     width: 40%;
     text-align: right;
@@ -709,7 +708,21 @@ table.dataTable {
     /* held for future */
 }
 
-/* input:: color picker logged in */
+.sfooter {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-item__control input {
+    width: 100%;
+    height: 40px;
+}
+
+.form-item__control input:hover {
+    border: 1px solid #0db379;
+    box-shadow: 0.1rem 0.2rem 0.3rem #0db37926;
+}
 
 input.settingsInput[type="color"] {
     -webkit-appearance: none;
@@ -790,10 +803,6 @@ select {
 09. START ALERTS
 -----------------------------------------------------------------------*/
 
-.swal-modal {
-    background-color: #fff;
-    border-radius: 0;
-}
 
 /*-----------------------------------------------------------------------
 09. END ALERTS
@@ -803,9 +812,7 @@ select {
 AHMED4CSS entered
 -----------------------------------------------------------------------*/
 /* table options stuff */
-.settings input  { 
-    margin-bottom: 10px;
-}
+
 
 /* disable text selection*/
 * {

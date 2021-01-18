@@ -471,43 +471,53 @@ $(document).ready(function(){
             }
         }
     });
-
-    //#random event
-    $('#random').on('click', function(){
-        className = $(this).attr('class');
-        if (className.slice(-2,)=='on'){
-            console.log('off')
-            $(this).parent().find('#chkbxt').text('مفعل');
+    
+    //#tap1_zoom 
+    $('#switch4').click(function(){
+        if ( $(this).is(':checked') ){
+            console.log('on');
+            swal("الأن يمكنك تكبير المسائل فى الجدول بتحريك الماوس فوقها.", {
+                button: "حسناً",
+                timer:3000
+            });
+            for (var i = 0; images.length > i; i++) {
+                images[i].classList.toggle('zoomEffect');
+            }
         }
         else {
-            console.log('on');
+            console.log('off');
             $(this).parent().find('#chkbxt').text('غير مفعل');
+            for (var i = 0; images.length > i; i++) {
+                images[i].classList.toggle('zoomEffect');
+            }
         }
     });
-
-    //#watermark
-    $('#watermark').on('click', function(){
-        className = $(this).attr('class');
-        if (className.slice(-2,)=='on'){
-            console.log('off')
-            $(this).parent().find('#chkbxt').text('غير مفعل');
-            $('#watermark_op').fadeOut();
-        }
-        else {
+    
+    //#random 
+    $('#switch1').click(function(){
+        if ( $(this).is(':checked') ){
             console.log('on');
-            $(this).parent().find('#chkbxt').text('مفعل');
             $('#watermark_op').fadeIn();
         }
+        else {
+            console.log('off');
+            $('#watermark_op').fadeOut();
+        }
+    });
+
+    //#watermark 
+    $('#switch2').click(function(){
+        if ( $(this).is(':checked') ){
+            console.log('on');
+            $('#watermark_op').fadeIn();
+        }
+        else {
+            console.log('off');
+            $('#watermark_op').fadeOut();
+        }
     });
 
 
-    const toggle = document.querySelectorAll('.toggle');
-
-    for (var i = 0; toggle.length > i; i++) {
-        toggle[i].addEventListener('click', function () {
-            this.classList.toggle('is-on');
-        });
-    }
     //settings - checkbox & color picker - handler
     $(document).on('change', 'input.settingsInput[type=color]', function() {
         this.parentNode.style.backgroundColor = this.value;
@@ -516,7 +526,6 @@ $(document).ready(function(){
 
 }); 
 
-// End docmennt ready
 
 // tabs js engine code.
 const tabLinks = document.querySelectorAll(".tabs a");

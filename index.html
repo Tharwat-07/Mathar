@@ -51,7 +51,7 @@ END PRELOADER
                     <a href=""><span class='tapText'>المعاينة</span></a>
                 </li>
                 <li>
-                    <a href=""><span class='tapText'>عن البرنامج</span></a>
+                    <a href=""><span class='tapText'>الإعدادات</span></a>
                 </li>
             </ul>
             <div class="tabs-content">
@@ -96,36 +96,8 @@ END PRELOADER
 
                 </div>
                 <div class="tabs-panel" data-index="3">
-                    <p>soon...</p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-        <!--==========================
-START SETTING MODAL
-==========================-->
-        <div id='settings' class="setting_modal_btn">
-            <button href="#" class="icon-cog" data-toggle="modal" data-target="#basicModal"></button>
-        </div>
-
-        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">الإعدادات</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div>
-                            <div class="container">
-                                <div class="grid" style="height: 60vh;overflow-y: scroll;">
+                    <div class="container">
+                                <div class="grid">
                                     <h3>عام</h3>
                                     <div class='line'></div>
                                     <div class="form-item" title='.نوع الخط المستخدم فى كتابة المسائل'>
@@ -155,24 +127,22 @@ START SETTING MODAL
                                     </div>
                                     <div class='line'></div>  
                                     <div class="form-item" title='.(ينصح به) ترتيب عشوائى للمسائل المختارة فى كل ورقة يتم تكوينها'>
-                                        <div id='random' class="form-item__control toggle is-on">
-                                            <div class="toggle__handle"></div>
-                                            <div id='chkbxt'>مفعل</div>
+                                        <div class="form-item__control">
+                                            <input type="checkbox" id="switch1"><label for="switch1"></label>
                                         </div>
                                         <label class="form-item__label">:ترتيب عشوائى</label>
                                     </div>
                                     <div class='line'></div>
                                     <div class="form-item">
-                                        <div id='watermark' class="form-item__control toggle">
-                                            <div class="toggle__handle"></div>
-                                            <div id='chkbxt'>غير مفعل</div>
+                                        <div class="form-item__control">
+                                            <input type="checkbox" id="switch2"><label for="switch2"></label>
                                         </div>
                                         <label class="form-item__label">:علامة مائية</label>
                                     </div>
                                     <div class='line'></div>
                                     <div id='watermark_op' class="form-item" style="display:none;" title='.العلامة المائية هى نص مختار يظهر فى خلفية ورقة الاسئلة'>
-                                        <div class="form-item__control toggle">
-                                            <input class='settingsInput' value='علامة مائية'>
+                                        <div class="form-item__control">
+                                            <input>
                                         </div>
                                         <label class="form-item__label">:العلامة مائية</label>
                                     </div>
@@ -180,9 +150,8 @@ START SETTING MODAL
                                     <h3>جدول</h3>
                                     <div class='line'></div>
                                     <div class="form-item" title='.تفعيل هذا الخيار يمكنك بتكبير المسائل فى نافذة جدول المسائل لرؤيتها بشكل اكبر'>
-                                        <div id='tap1_zoom' class="form-item__control toggle">
-                                            <div class="toggle__handle"></div>
-                                            <div id='chkbxt'>غير مفعل</div>
+                                        <div class="form-item__control">
+                                            <input type="checkbox" id="switch4"><label for="switch4"></label>
                                         </div>
                                         <label class="form-item__label">:تكبير المسائل</label>
                                     </div>
@@ -215,14 +184,44 @@ START SETTING MODAL
                                         </div>
                                         <label class="form-item__label">:لون هامشى</label>
                                     </div>
-
+                                    <div class='sfooter'>
+                                        <button class="save_setting">حفظ الإعدادات</button>
+                                    </div>
                                 </div>
                             </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--==========================
+START SETTING MODAL
+==========================-->
+        <div id='settings' class="setting_modal_btn">
+            <button href="#" class="icon-cog" data-toggle="modal" data-target="#basicModal"></button>
+        </div>
+
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">الإعدادات</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            
                         </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button class="save_setting">حفظ الإعدادات</button>
+                        <button class="save_setting">soon</button>
                     </div>
                 </div>
             </div>
